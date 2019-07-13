@@ -1,0 +1,17 @@
+baseurl:
+title: Maximum Certainty
+author: Maksim Sorokin
+markdown: kramdown
+markdown_ext: "md"
+permalink: /:title
+timezone: America/New_York
+excerpt_separator: <!--more-->  # you can specify your own separator, of course.
+exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'UploadToGithub.Rakefile', 'README.md']
+post:
+  template: _post.txt
+  extension: md
+page:
+  template: _page.txt
+  extension: md
+git:
+  branch: master
