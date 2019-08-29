@@ -12,11 +12,11 @@ date: Nov 2018
 
 This project is a Final Project of [Dr. Karen Liu](https://www.cc.gatech.edu/~karenliu/Home.html)'s [Computer Animation](https://www.cc.gatech.edu/~dellaert/18F-8803MM/Mobile_Manipulation_2018.html) class.
 
-In the current project we have utilized an off-the-shelf Soft-Actor-Critic {% sidenote 'SAC' '[https://spinningup.openai.com/en/latest/algorithms/sac.html](https://spinningup.openai.com/en/latest/algorithms/sac.html)' %} Off-policy Reinforcement Learning method.
+Off-the-shelf [Soft-Actor-Critic](https://spinningup.openai.com/en/latest/algorithms/sac.html) Off-policy Reinforcement Learning method  has been used to train body build up the momentum on a pull up bar.
 
 The representation of the body (**State**) contains 39 positions and their relative velocities. **Action space** is a desired DOF position for `thigh, bicep, shin, forearm, toe, hand1&2, head`. Left and right parts of the body are "mirrored", i.e. left thigh and right thigh are initilized in the same relative configuration and both get the same displacement values/actions. **Reward** is continious and given as absolute velocity of pelvis around `z` axis.
 
-NeuralNet consists of 1 layer FC layer with 256 neurons.
+NeuralNet consists of 1 layer Fully Connected layer of 256 neurons.
 
 *Initial policy* (`0 mins of training`):
 
