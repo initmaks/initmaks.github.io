@@ -10,18 +10,29 @@ title: About
   		<br><br>
   		<i>Maks(im) Sorokin</i>
   		<br>
-  		<a href="https://www.twitter.com/initmaks/">[Twitter]</a> <a href="https://github.com/initmaks/">[Github]</a>
+  		<a href="https://www.twitter.com/initmaks/">[Twitter]</a> <a href="https://github.com/initmaks/">[Github]</a> <a href="../misc/CV_SEP19.pdf">[CV]</a>
   	</p>
   </div>
   <div>
   	<p>
   		<br>
-  		My name is Maks, I'm MSCS student at Georgia Tech, working on Deep Reinforcement Learning for Manipulation with <a href="https://www.cc.gatech.edu/~karenliu/Home.html">Dr. Karen Liu</a> & <a href="https://wenhaoyu.weebly.com/">Wenhao Yu</a>, also Head TA-ing <a href="https://docs.google.com/document/d/e/2PACX-1vSfX11I1FjSvXfu7FdhdNa-XwHZx8HK4Ot-nM76dKWE85MB_y6xCN5XkjR-xycY6i4YB67K4Iw0Jkm2/pub">CS6601 AI class</a> by <a href="https://www.cc.gatech.edu/people/thomas-ploetz"> Dr. Thomas Ploetz </a> & <a href="https://www.cc.gatech.edu/home/thad/">Dr. Thad Starner</a>.
+  		My name is Maks, I'm MSCS student at Georgia Tech, working on Deep Reinforcement Learning for Vision based Manipulation with <a href="https://www.cc.gatech.edu/~karenliu/Home.html">Dr. Karen Liu</a> & <a href="https://wenhaoyu.weebly.com/">Wenhao Yu</a>, also Head TA-ing <a href="https://docs.google.com/document/d/e/2PACX-1vSfX11I1FjSvXfu7FdhdNa-XwHZx8HK4Ot-nM76dKWE85MB_y6xCN5XkjR-xycY6i4YB67K4Iw0Jkm2/pub">CS6601 AI class</a> by <a href="https://www.cc.gatech.edu/people/thomas-ploetz"> Dr. Thomas Ploetz</a> & <a href="https://www.cc.gatech.edu/home/thad/">Dr. Thad Starner</a>.
   		<br><br>
   		<br>
   		<h2>Projects</h2>
   		<br>
   		<div style="display: grid; grid-template-columns: 30% 70%; padding: 10px; grid-column-gap: 50px;">
+  			<!-- ################################################################################## -->
+  			<div>
+  				<img src="../assets/img/lift/lift.gif" style="border-radius: 5%; margin-top:15px" width="300" height="190"/>
+  			</div>
+  			<div>
+  				<p>
+  					<strong>Vision RL Based Object Manipulation</strong></a> [work in progress] - End-to-end vision based object manipulation, using InMoov body model with 21 DOF anthropomorphic hand. 
+  				</p>
+  			</div>
+
+  			<!-- ################################################################################## -->
   			<div>
   				<img src="../assets/img/swing_rl/anim.gif" style="border-radius: 5%; margin-top:15px" width="300" height="190"/>
   			</div>
