@@ -10,7 +10,8 @@ title: About
   		<br><br>
   		<i>Maks(im) Sorokin</i>
   		<br>
-  		<a href="https://www.twitter.com/initmaks/">[Twitter]</a> <a href="https://github.com/initmaks/">[Github]</a> <a href="../misc/CV_SEP19.pdf">[CV]</a>
+  		<a href="https://www.twitter.com/initmaks/">[Twitter]</a> <a href="https://keybase.io/initmaks/">[Keybase]</a> 
+  		<br><a href="https://github.com/initmaks/">[Github]</a> <a href="../misc/CV_SEP19.pdf">[CV]</a>
   	</p>
   </div>
   <div>
