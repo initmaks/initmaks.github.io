@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/initmaks
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://initmaks.github.io
+  * I am initmaks (https://keybase.io/initmaks) on keybase.
+  * I have a public key ASBLSmxC7O3ADw5HCuYI0QXNYhjB-QL8iFAh0aY_iJTllAo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01204b4a6c42ecedc00f0e470ae608d105cd6218c1f902fc885021d1a63f8894e5940a",
+      "host": "keybase.io",
+      "kid": "01204b4a6c42ecedc00f0e470ae608d105cd6218c1f902fc885021d1a63f8894e5940a",
+      "uid": "f6f502d2af0482fd8eb917d211e82a19",
+      "username": "initmaks"
+    },
+    "merkle_root": {
+      "ctime": 1570676575,
+      "hash": "632e04bc9656ac15db46e31e3c9cc164c0d32c6d645b023bee003c4ea0e54655d3c9817ca166cb4a4004a60a1c7488ce4f4743fa80ef8a27ed2d20cdda3dae2c",
+      "hash_meta": "391193f8a3840d24de46ac078a2cb7fabceaa9f19a0b6be324f31b30148a38b2",
+      "seqno": 7950596
+    },
+    "service": {
+      "entropy": "Av8tS62wo0HrVkuFZ+wyiOJc",
+      "hostname": "initmaks.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "4.5.0"
+  },
+  "ctime": 1570676597,
+  "expire_in": 504576000,
+  "prev": "18bd2a6f4c101920cee4599eca53d19aab73f122d855fcb0ae432a25ee8ed4aa",
+  "seqno": 27,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgS0psQuztwA8ORwrmCNEFzWIYwfkC/IhQIdGmP4iU5ZQKp3BheWxvYWTESpcCG8QgGL0qb0wQGSDO5FmeylPRmqtz8SLYVfywrkMqJe6O1KrEII2w9hOTyFnTMBR1yJnyL9HylhE/OQt0dliFcC2GFkezAgHCo3NpZ8RAehg4pa//Jaz6JW1VmkdT0QA0QpgDPkfzqC1oLx4/Y/H1txsCky1vMww3QomfJI62iV9pBcYmL+lQLZYm4TJaCahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEINF9wjIFzbVRkyGEtNvNUiItA4EniEaXOuo3WtnMrRUTo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/initmaks
+
+==================================================================
