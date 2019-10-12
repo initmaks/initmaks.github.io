@@ -29,7 +29,7 @@ title: About
   			</div>
   			<div>
   				<p>
-  					<strong>Vision RL Based Object Manipulation</strong></a> [work in progress] - End-to-end vision based object manipulation, using InMoov body model with 21 DOF anthropomorphic hand. 
+  					<strong>Object Manipulation using Vision based RL</strong> [work in progress] - End-to-end vision based object manipulation, using InMoov body model with 21 DOF anthropomorphic hand. 
   				</p>
   			</div>
 
