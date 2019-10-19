@@ -17,7 +17,7 @@ title: About
   <div>
   	<p>
   		<br>
-  		My name is Maks, I'm MSCS student at Georgia Tech, working on Deep Reinforcement Learning for Vision based Manipulation with <a href="https://www.cc.gatech.edu/~karenliu/Home.html">Dr. Karen Liu</a> & <a href="https://wenhaoyu.weebly.com/">Wenhao Yu</a>, also Head TA-ing <a href="https://docs.google.com/document/d/e/2PACX-1vSfX11I1FjSvXfu7FdhdNa-XwHZx8HK4Ot-nM76dKWE85MB_y6xCN5XkjR-xycY6i4YB67K4Iw0Jkm2/pub">CS6601 AI class</a> by <a href="https://www.cc.gatech.edu/people/thomas-ploetz"> Dr. Thomas Ploetz</a> & <a href="https://www.cc.gatech.edu/home/thad/">Dr. Thad Starner</a>.
+  		My name is Maks, I'm MSCS student at Georgia Tech, working on Deep Reinforcement Learning for Vision based Manipulation with <a href="https://cs.stanford.edu/~karenliu/Home.html">Dr. Karen Liu</a> & <a href="https://wenhaoyu.weebly.com/">Wenhao Yu</a>, also Head TA-ing <a href="https://docs.google.com/document/d/e/2PACX-1vSfX11I1FjSvXfu7FdhdNa-XwHZx8HK4Ot-nM76dKWE85MB_y6xCN5XkjR-xycY6i4YB67K4Iw0Jkm2/pub">CS6601 AI class</a> by <a href="https://www.cc.gatech.edu/people/thomas-ploetz"> Dr. Thomas Ploetz</a> & <a href="https://www.cc.gatech.edu/home/thad/">Dr. Thad Starner</a>.
   		<br><br>
   		<br>
   		<h2>Projects</h2>
