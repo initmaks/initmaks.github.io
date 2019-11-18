@@ -6,9 +6,3 @@ categories: test
 ---
 
 [Please go to my "About" page](https://initmaks.github.io/about/)
-
-# H1
-
-## H2
-
-### H3
