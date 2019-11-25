@@ -38,7 +38,7 @@ title: About
   			</div>
   			<div>
   				<p>
-  					<a href="https://github.com/initmaks/ran2can"><strong>Real2Sim Image adaptation</strong></a> - Image domain adaptation through the conversion of images with randomized textures (or real images) to a canonical image representation. Replication of a <a href="https://arxiv.org/abs/1812.07252">RCAN paper</a> with different loss modeling (GAN loss -> <a href="https://arxiv.org/abs/1603.08155">Perceptual/Feature Loss</a> ).
+  					<a href="https://github.com/initmaks/ran2can"><strong>Real2Sim Image adaptation</strong></a> - Image domain adaptation through the conversion of images with randomized textures (or real images) to a canonical image representation. Replication of a <a href="https://arxiv.org/abs/1812.07252">RCAN paper</a> with different loss modeling (GAN loss -> <a href="https://arxiv.org/abs/1603.08155">Perceptual/Feature Loss</a>).
   				</p>
   			</div>
   			<!-- ################################################################################## -->
