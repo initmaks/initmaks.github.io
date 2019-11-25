@@ -32,7 +32,15 @@ title: About
   					<strong>Object Manipulation using Vision based RL</strong> [work in progress] - End-to-end vision based object manipulation, using InMoov body model with 21 DOF anthropomorphic hand. 
   				</p>
   			</div>
-
+  			<!-- ################################################################################## -->
+  			<div>
+  				<img src="../assets/img/ran2can/simsim2.png" style="border-radius: 5%; margin-top:15px" width="300" height="190"/>
+  			</div>
+  			<div>
+  				<p>
+  					<a href="https://github.com/initmaks/ran2can"><strong>Real2Sim Image adaptation</strong></a> - Image domain adaptation through the conversion of randomized image textures (or real image) to a canonical image representation. Replication of a <a href="https://arxiv.org/pdf/1812.07252.pdf">RCAN paper</a> with different loss modeling (GAN loss -> Perceptual/Feature Loss).
+  				</p>
+  			</div>
   			<!-- ################################################################################## -->
   			<div>
   				<img src="../assets/img/swing_rl/anim.gif" style="border-radius: 5%; margin-top:15px" width="300" height="190"/>
