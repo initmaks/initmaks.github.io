@@ -10,15 +10,17 @@ title: About
   		<br><br>
   		<i>Maks(im) Sorokin</i>
   		<br>
-  		<a href="https://www.twitter.com/initmaks/">[Twitter]</a> <a href="https://keybase.io/initmaks/">[Keybase]</a> 
-  		<br><a href="https://github.com/initmaks/">[Github]</a> <a href="../misc/CV_SEP19.pdf">[CV]</a>
+  		<a href="https://www.twitter.com/initmaks/">[Twitter]</a> <a href="https://github.com/initmaks/">[Github]</a>
+  		<br><a href="../misc/CV.pdf">[CV]</a>
   	</p>
   </div>
   <div>
   	<p>
   		<br>
   		My name is Maks, I'm MSCS student at Georgia Tech, working on Deep Reinforcement Learning for Vision based Manipulation with <a href="https://cs.stanford.edu/~karenliu/Home.html">Dr. Karen Liu</a> & <a href="https://wenhaoyu.weebly.com/">Wenhao Yu</a>, also Head TA-ing <a href="https://docs.google.com/document/d/e/2PACX-1vSfX11I1FjSvXfu7FdhdNa-XwHZx8HK4Ot-nM76dKWE85MB_y6xCN5XkjR-xycY6i4YB67K4Iw0Jkm2/pub">CS6601 AI class</a> by <a href="https://www.cc.gatech.edu/people/thomas-ploetz"> Dr. Thomas Ploetz</a> & <a href="https://www.cc.gatech.edu/home/thad/">Dr. Thad Starner</a>.
+      <a><h2>News</h2></a>
   		<br><br>
+      I will be starting as a PhD student in Robotics at Georgia Tech in **Fall 2020**!
   		<br>
   		<h2>Projects</h2>
   		<br>
@@ -29,7 +31,7 @@ title: About
   			</div>
   			<div>
   				<p>
-  					<strong>Object Manipulation using Vision based RL</strong> [work in progress] - End-to-end vision based object manipulation, using InMoov body model with 21 DOF anthropomorphic hand. 
+  					<strong>Object Search using Vision based RL</strong> [in progress] - End-to-end vision based object search.
   				</p>
   			</div>
   			<!-- ################################################################################## -->
