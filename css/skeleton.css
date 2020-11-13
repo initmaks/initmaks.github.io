@@ -456,6 +456,7 @@ there.
   /* display: table-cell;
   vertical-align: middle; */
   margin-bottom: 0em;
+  text-align:justify;
 }
 
 #project_entry {
