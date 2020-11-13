@@ -1,9 +1,409 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Example</title>
-    </head>
-    <body>
-        <p>This is an example of a simple HTML page with one paragraph.</p>
-    </body>
+<html lang="en">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script><script src="assets/icon.js"></script>
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Maks Sorokin</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- <link rel="icon" type="image/png" href="assets/"> -->
+
+</head>
+<body>
+
+  <!-- MENU
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- <div class="container"> -->
+    <!-- <div class="row u-full-width"  style="margin-top: 3%"> -->
+      <!-- Profile photo -->
+
+      <!-- Self-introduction -->
+      <!-- <div class="eight columns" style="margin-top: 10px"> -->
+        <!-- <ul style="list-style-type: none; margin: 0; padding: 0;"> -->
+          <!-- <li style="display: inline;"><a href="default.asp">Home</a></li> -->
+          <!-- <li style="display: inline;"><a href="default.asp">Home</a></li> -->
+          <!-- <li><a href="news.asp">News</a></li> -->
+          <!-- <li><a href="contact.asp">Contact</a></li> -->
+          <!-- <li><a href="about.asp">About</a></li> -->
+        <!-- </ul> -->
+      <!-- </div> -->
+
+    <!-- </div> -->
+  <!-- </div> -->
+
+
+  <!-- Personal Info
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div class="row"  style="margin-top: 4%">
+      <div class="three columns">
+        <!-- Profile photo
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <img src="assets/img/photo.jpg" style="width:200px; border-radius: 50%;" alt="profile photo"><br>
+        <!-- Name
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <h5 style="text-align: center;">Maks Sorokin</h5>
+        <!-- <h6 style="margin-top: -3px; text-align: center;">@GeorgiaTech</h6> -->
+        <!-- Social links
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <div id="social">
+          <a href="https://twitter.com/initmaks"><img src="assets/icons/twitter.png" class="iico" /></a>
+          <a href="https://wandb.ai/maks"><img src="assets/icons/wandb.png" class="iico"/></a>
+          <a href="https://github.com/initmaks"><img src="assets/icons/github.png" class="iico"/></a>
+          <a href="assets/pdfs/CV.pdf"><img src="assets/icons/file.png" class="iico" /></a>
+          <img src="assets/icons/mail.png" style="cursor: pointer;" class="iico" id="iemail" title="click to reveal" />
+        </div>
+        <div id="demail"></div> <!-- will reveal email -->
+      </div>
+
+      <div class="nine columns" style="margin-top: 5%;">
+        <p style="text-align:justify;">
+          <!-- Self-introduction
+          –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+          I'm a first-year Robotics Ph.D. student advised by
+          <a href="https://www.cc.gatech.edu/~sha9/" style="text-decoration: none;">Dr. Sehoon Ha</a> 
+          and 
+          <a href="https://ckllab.stanford.edu/" style="text-decoration: none;">Dr. C. Karen Liu</a>.
+          I am interested in applications of vision-based reinforcement learning in real-world robotics.
+          At the moment, I am tackling outdoor navigation and environment interaction problems for quadrupedal robots.</p>
+          <!-- 
+          –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <!-- <strong>Competences:</strong>
+        <a>python</a>,
+        <a>pytorch</a>,
+        <a>pybullet</a>,
+        <a>iGibson</a>,
+        <a>OpenCV</a>,
+        <a>numpy</a>,
+        <a>Tensorflow</a>,
+        <a>C/C++</a>,
+        <a>ROS</a>,
+        <a>docker</a> -->
+          
+        <!-- <h5><u>News</u></h5>
+        <ul>
+          <li>asdf</li>
+        </ul> -->
+
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Publications
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <br><div class="div_line"></div><br>
+    <h5><u>Publications</u></h5>
+
+
+    <!-- PUBLICATION ENTRY ###
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="row" id="project_entry">
+      <!-- MEDIA SECTION
+      –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <div class="four columns">
+        <img src="assets/img/head.png" style="width:300px;">
+      </div>
+      <div class="eight columns">
+        <!-- NEW TAG
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <img src="assets/icons/new.png" style="width:24px; margin-bottom: -4px; margin-right: 2px; margin-left:-30px" alt="new">
+        <!-- TITLE
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <div id="project_title">Learning Human Search Behavior from Egocentric View</div>
+        <!-- AUTHORS
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <br><em><strong>Maks Sorokin</strong>, Wenhao Yu, Sehoon Ha, C. Karen Liu </em>
+        <!-- DESCRIPTION
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <p id="project_info">
+          We train vision-based agent to perform object searching in photorealistic 3D scene.
+          And propose a motion synthesis mechanism for head motion re-targeting.
+          Using which we enable object searching behaviour with animated human character (PFNN/NSM).
+        </p>
+          <!-- LINKS
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <a href="https://arxiv.org/pdf/2011.03618.pdf">[PDF]</a>
+        <a href="https://arxiv.org/abs/2011.03618">[arXiv]</a>
+        
+
+      </div>
+    </div>
+
+
+    <!-- PUBLICATION ENTRY ###
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="row" id="project_entry">
+      <!-- MEDIA SECTION
+      –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <div class="four columns">
+        <img src="assets/img/sensormeta_H.png" style="width:300px;">
+      </div>
+      <div class="eight columns">
+        <!-- NEW TAG
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <img src="assets/icons/new.png" style="width:24px; margin-bottom: -4px; margin-right: 2px; margin-left:-30px" alt="new">
+        <!-- TITLE
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <div id="project_title">A Few Shot Adaptation of Visual Navigation Skills to New Observations using Meta-Learning</div>
+        <!-- AUTHORS
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <br><em>Qian Luo, <strong>Maks Sorokin</strong>, Sehoon Ha</em>
+        <!-- DESCRIPTION
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <p id="project_info">
+        We show how vision-based navigation agents can be trained to adapt to new sensor configurations with only three shots of experience. 
+        Rapid adaptation is achieved by introducing a bottleneck between perception and control networks, and through the perception component's meta-adaptation.        
+        </p>
+          <!-- LINKS
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <a href="https://arxiv.org/pdf/2011.03609.pdf">[PDF]</a>
+        <a href="http://arxiv.org/abs/2011.03609">[arXiv]</a>
+
+      </div>
+    </div>
+    
+  </div>
+
+  <!-- Projects
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <br><div class="div_line"></div><br>
+    <h5><u>Projects</u></h5>
+
+    <!-- PROJECT ENTRY ###
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="row" id="project_entry">
+      <!-- MEDIA SECTION
+      –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <div class="four columns">
+        <img src="assets/img/sim2sim.png" style="width:300px; ">
+      </div>
+      <div class="eight columns">
+        <!-- NEW TAG
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <!-- <img src="assets/icons/new.png" style="width:24px; margin-bottom: -4px; margin-right: 2px; margin-left:-30px" alt="new"> -->
+        <!-- TITLE
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <div id="project_title">Real2Sim Image adaptation</div>
+        <!-- DESCRIPTION
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <p id="project_info">
+          Image domain adaptation through the conversion of images with randomized textures (or real images) to a canonical image representation.
+          Replication of a <a href="https://arxiv.org/abs/1812.07252">RCAN paper</a> with different loss modeling (GAN loss -> <a href="https://arxiv.org/abs/1603.08155">Perceptual/Feature Loss</a>).
+        </p>
+          <!-- LINKS
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <a href="https://github.com/initmaks/ran2can">[github]</a>
+
+      </div>
+    </div>
+
+
+    <!-- PROJECT ENTRY ###
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="row" id="project_entry">
+      <!-- MEDIA SECTION
+      –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <div class="four columns">
+        <img src="assets/img/char_swing.gif" style="width:300px; height:180px;">
+      </div>
+      <div class="eight columns">
+        <!-- NEW TAG
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <!-- <img src="assets/icons/new.png" style="width:24px; margin-bottom: -4px; margin-right: 2px; margin-left:-30px" alt="new"> -->
+        <!-- TITLE
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <div id="project_title">Learning to swing</div>
+        <!-- DESCRIPTION
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <p id="project_info">
+          Computer Animation class project, which utilizes off-the-shelf Soft-Actor-Critic Reinforcement Learning method that learns to build up the momentum and swing the animated character on a pull up bar.
+        </p>
+          <!-- LINKS
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <a href="pages/charanim.html">[short-summary]</a>
+
+      </div>
+    </div>
+
+    <!-- PROJECT ENTRY ###
+      FETCHIT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="row" id="project_entry">
+      <!-- MEDIA SECTION
+      –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <div class="four columns">
+        <img src="assets/img/fetchit.gif" style="width:300px; height:180px;">
+      </div>
+      <div class="eight columns">
+        <!-- NEW TAG
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <!-- <img src="assets/icons/new.png" style="width:24px; margin-bottom: -4px; margin-right: 2px; margin-left:-30px" alt="new"> -->
+        <!-- TITLE
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <div id="project_title">FetchIt</div>
+        <!-- DESCRIPTION
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <p id="project_info">
+          Mobile Manipulation project that utilises MoveIt! & GQ-CNN to grasp an object from the table using a Fetch Robot in the Gazebo Simulator.
+        </p>
+          <!-- LINKS
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <a href="pages/fetchit.html">[short-summary]</a>
+
+      </div>
+    </div>
+
+    <!-- PROJECT ENTRY ###
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="row" id="project_entry">
+      <!-- MEDIA SECTION
+        BEHAVIOURAL DRIVING
+      –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <div class="four columns">
+        <img src="assets/img/drive.gif" style="width:300px;">
+      </div>
+      <div class="eight columns">
+        <!-- NEW TAG
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <!-- <img src="assets/icons/new.png" style="width:24px; margin-bottom: -4px; margin-right: 2px; margin-left:-30px" alt="new"> -->
+        <!-- TITLE
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <div id="project_title">Behavioral Clonning for Autonomous Driving</div>
+        <!-- DESCRIPTION
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <p id="project_info">
+          End-to-end (image-to-steering wheel) control policy learning from data collected over multiple laps with off-the-track recoveries generated by human.
+        </p>
+          <!-- LINKS
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <a href="https://github.com/initmaks/Self-driving_car_ND/tree/master/Behavioral-Cloning">[github]</a>
+
+      </div>
+    </div>
+
+    <!-- PROJECT ENTRY ###
+      LINE MARKINGS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="row" id="project_entry">
+      <!-- MEDIA SECTION
+      –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <div class="four columns">
+        <img src="assets/img/drive2.gif" style="width:300px;">
+      </div>
+      <div class="eight columns">
+        <!-- NEW TAG
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <!-- <img src="assets/icons/new.png" style="width:24px; margin-bottom: -4px; margin-right: 2px; margin-left:-30px" alt="new"> -->
+        <!-- TITLE
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <div id="project_title">Line Marking Detection</div>
+        <!-- DESCRIPTION
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <p id="project_info">
+          Project which uses sobel filters, perspective transforms, and line fitting to extact and display lane boundaries from the front camera feed of the car.
+        </p>
+          <!-- LINKS
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <a href="https://github.com/initmaks/Self-driving_car_ND/tree/master/Advanced-Lane-Lines">[github]</a>
+
+      </div>
+    </div>
+    <!-- PROJECT ENTRY ### 
+      PANNING
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="row" id="project_entry">
+      <!-- MEDIA SECTION
+      –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <div class="four columns">
+        <img src="assets/img/panning.gif" style="width:300px;">
+      </div>
+      <div class="eight columns">
+        <!-- NEW TAG
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <!-- <img src="assets/icons/new.png" style="width:24px; margin-bottom: -4px; margin-right: 2px; margin-left:-30px" alt="new"> -->
+        <!-- TITLE
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <div id="project_title">Add panning motion with any photo</div>
+        <!-- DESCRIPTION
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <p id="project_info">
+          Computational Photography project, app allows user to automatically crop out the object of interest and apply panning effect based on the magnitude and direction provided.
+        </p>
+          <!-- LINKS
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <!-- <a href="https://github.com/initmaks/ran2can">[github]</a> -->
+
+      </div>
+    </div>
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<!-- attempt hiding from spambots :p - snippet credits Andrej Karpathy - karpathy.ai source code -->
+<script type="text/javascript">
+  var e_is_shown = false;
+  document.getElementById('iemail').addEventListener("click", function(){
+    let demail = document.getElementById('demail');
+    demail.innerHTML = 'm' + 'aks' + ' _a' + 't_ ' + 'gatech' + '.' + 'e' + 'du';
+    demail.style.opacity = e_is_shown ? 0 : 1;
+    e_is_shown = !e_is_shown;
+  })
+</script>
+
+
+<!-- ### FOOTER ### -->
+
+
+<br>
+<br>
+<br>
+
+<br>
+<br><div class="div_line"></div><br>
+
+<p style="color:gray; text-align:center; font-size: small;">
+<h7 style="text-decoration: none;">consider checking out: </h7><br><br>
+<a href="https://www.givewell.org/"><img src="assets/icons/gw.jpg" style="width:100px;"></a>
+<a href="https://www.givingwhatwecan.org/"><img src="assets/icons/gwwc.png" style="width:100px;"></a>
+<a href="https://www.effectivealtruism.org/"><img src="assets/icons/ea.png" style="width:80px; margin:10px"></a>
+
+</p>
+
+
+<div class="div_line"></div><br>
+
+<p style="color:gray; text-align:center; font-size: small;">
+2020© Maks Sorokin<br>
+built using <a href="http://getskeleton.com/">Skeleton</a>,
+icon credits <a href="https://www.flaticon.com/"> flaticon</a>,
+hosted by  <a href="https://pages.github.com/"> GitHub Pages</a>❤️
+<br>
+<br>
+feel free to copy: <a href="https://github.com/initmaks/initmaks.github.io">this page</a>
+</p>
+
+</body>
 </html>
