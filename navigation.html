@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script><script src="assets/icon.js"></script>
+<script src="js/skeleton-tabs.js"></script>
 <head>
 
   <!-- Basic Page Needs
@@ -23,6 +24,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/skeleton-tabs.css">
 
 </head>
 
@@ -85,6 +87,166 @@
       <p>
       <iframe width="720" height="400" src="https://www.youtube.com/embed/JsAZy3YETwQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </p>
+
+      <h3>Method</h3>
+      <figure style="text-align:center;">
+        <img class="u-max-full-width" src="assets/img/nav/overview.png">
+        <figcaption style="text-align:center">Fig.1 - Overview of the entire pipeline from abstract to real world deployment.</figcaption>
+      </figure>
+
+      <p>
+        To obtain a visual navigation policy for outdoor sidewalk navigation we adopt a <a href="https://arxiv.org/abs/1912.12294">"learning by cheating"</a> framework,
+        that decomposes the problem into learning of teacher and student policies (see Fig.1).
+        We perform teacher training in an abstract world with salient information most relevant to the task of navigation.
+        We use a birds-eye-view image as the privileged observation and efficiently learn a navigation policy.
+        Once we obtain satisfactory performance, we transfer the behaviour to a student agent which only has access to realistic sensors
+        training it in a high-fidelity simulator. We use <a href="https://arxiv.org/abs/1011.0686">DAGGER</a>
+        to train the student policy. This two-staged learning allows us to train a policy much more efficiently than learning it from scratch.
+        In our experience, our two-staged learning framework takes approximately $30$ hours to converge, while learning from scratch takes more than 300 hours to converge.
+      </p>
+
+      <h4>Stage 1 - Navigation Policy</h4>
+      <p>
+        First, during the teacher training we aim to efficiently obtain the ideal control policy
+        by allowing it to access "privileged" information that cannot be obtained with robot's onboard sensors.
+        In our scenario, privileged information is represented by a birds-eye-view image that captures map layouts and nearby obstacles.
+        Because a high-fidelity simulation is computationally costly, we accelerate the learning by employing
+        a simple abstract world for teacher training. This abstract world only contains essential information
+        required for sidewalk navigation, such as walkable/non-walkable area, and static/dynamic objects (see Fig.1 - abstract world).
+        We create this abstract world using <a href="https://pybullet.org/">Pybullet</a>, which provides a fast and simple interface for
+        accessing and rendering the abstract world observation modalities. In our experience, an abstract world can generate samples 
+        more than 10 times faster than a high-fidelity simulator.
+        
+        <br>
+        <br>
+        To train the teacher agent, we use a modification of the <a href="https://github.com/denisyarats/pytorch_sac_ae">Soft Actor-Critic</a>,
+        and train until saturation, which reaches the success rate of 83% on the validation environments in the high fidelity world.
+
+
+        <figure style="text-align:center;">
+          <img width="500" src="assets/img/nav/abstract_world_teacher.gif">
+          <figcaption style="text-align:center">Vid.1 - Trained teacher rollouts in the abstract world.</figcaption>
+        </figure>
+
+        
+        Once we obtain an effective teacher policy, we can train a student policy in a high-fidelity simulator
+        with realistic observations that the robot's onboard sensors can provide. We train a student policy
+        in <a href="https://carla.org">CARLA</a> (see Fig.1), a high fidelity simulator built on the Unreal Engine 4.
+        <br>
+        <br>
+        We clone the teacher's behavior to the student policy using DAGGER.
+        DAGGER allows the student agent to learn proper actions in a supervised learning fashion in the presence of the expert.
+        It generates a rollout using the current student policy, collects the corresponding <em>abstract</em> and <em>realistic</em> observations,
+        and updates the parameters by minimizing the L1 loss between the student and teacher actions.
+        Note that in the high-fidelity simulator we can generate both <em>realistic</em> and <em>abstract</em> observations,
+        where the latter is used by the teacher for generating labels (See Fig.1).
+
+        <figure style="text-align:center;">
+          <img width="500" src="assets/img/nav/student.gif">
+          <figcaption style="text-align:center">Vid.2 - Trained student rollouts in the high-fidelity world.</figcaption>
+        </figure>
+      
+
+      <h5>More detailed student policy rollouts:</h5>
+
+      <div class="tab">
+        <button class="tablinks, button-primary" onclick="opentab(event, 's1')">success 1</button>
+        <button class="tablinks, button-primary" onclick="opentab(event, 's2')">success 2</button>
+        <button class="tablinks, button-primary" onclick="opentab(event, 's3')">success 3</button>
+        <button class="tablinks, button" onclick="opentab(event, 'f1')">fail 1</button>
+        <button class="tablinks, button" onclick="opentab(event, 'f2')">fail 2</button>
+        <button class="tablinks, button" onclick="opentab(event, 'f3')">fail 3</button>
+      </div>
+
+      <!-- Tab content -->
+      <div id="s1" class="tabcontent">
+        <p><iframe class="center" width="720" height="400" src="https://www.youtube.com/embed/aqQNd5260XQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+      </div>
+
+      <div id="s2" class="tabcontent">
+        <p><iframe class="center" width="720" height="400" src="https://www.youtube.com/embed/EpikdRTGWq0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+      </div>
+
+      <div id="s3" class="tabcontent">
+        <p><iframe class="center" width="720" height="400" src="https://www.youtube.com/embed/gcW8_HWlqeY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+      </div>
+
+      <div id="f1" class="tabcontent">
+        <p><iframe class="center" width="720" height="400" src="https://www.youtube.com/embed/vfsRbmUcosI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+      </div>
+
+      <div id="f2" class="tabcontent">
+        <p><iframe class="center" width="720" height="400" src="https://www.youtube.com/embed/02Qu--YUwNw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+      </div>
+
+      <div id="f3" class="tabcontent">
+        <p><iframe class="center" width="720" height="400" src="https://www.youtube.com/embed/upt1eNxqFmI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+      </div>
+
+
+      </p>
+      <h4>Stage 2 - Sim-to-real Transfer</h4>
+
+      The student architecture (Fig.2) consists of 3 components: pre-trained <a href="https://arxiv.org/abs/1808.00897">BiSeNet</a> without the last layer for feature extraction,
+      <a href="https://arxiv.org/abs/1312.4400">Network-In-Network</a>, and 3-layer MLP for feature processing. 
+      
+      <figure style="text-align:center;">
+        <img class="u-max-full-width" src="assets/img/nav/arch.png">
+        <figcaption style="text-align:center">Fig.1 - Overview of the entire pipeline from abstract to real world deployment.</figcaption>
+      </figure>
+
+      <br>
+
+      In simulated environments, adding more sensing modalities often translates to simpler learning problems.
+      However, in the real world, we need to cautiously select sensors because each sensor comes with its own <em>sim-to-real</em> gap.
+      Therefore, we evaluate each sensor based on three criteria: (1) the usefulness of the information it encapsulates, (2) the additional difficulty in learning it adds, and (3) the sensitivity to the sim-to-real gap it induces.
+      To this end, we conduct an ablation study (Table.1) of different agent configurations.
+
+      <figure style="text-align:center;">
+        <img class="u-max-full-width" src="assets/img/nav/table.png">
+        <figcaption style="text-align:center">Table.1 - Success rate comparison of different agent configurations during training, validation, and real world testing. .</figcaption>
+      </figure>
+
+      To show that the  policy can be successfully transferred to the student agent with egocentric observations as a sanity we train an ideal <em>ULTIMATE</em> agent that has access to
+      all the sensors raw RGB images, depth images, ground-truth semantic images, lidar, and localization. As it achieves the success rate of 76.86% that is only 6% lower than the teacher, we conclude it a successful sanity check.
+      
+      <br><br>Visual sensors, such as RGB, depth images, or semantics segmentations, are useful information to recognize surroundings.
+      Table.1 indicates that all three agent with individual sensors,
+      raw RGB images <em>(RGB)</em>, depth images <em>(DEPTH)</em>, ground-truth semantic images <em>(GT-SEM)</em>,
+      show promising performance of 73.16%, 65.14% and 73.14%, respectively.
+      However, ground-truth semantic is not available at deployment, and the performance drops to 63.26% when we infer it
+      using a pre-trained semantic segmentation model <em>(INF-SEM)</em>.
+      
+      <br><br>Next, we investigate the third criteria, the sim-to-real transferability. At which point, we stop investigating the <em>DEPTH</em> agent
+      because our infrared-based depth camera works poorly under direct sunlight in outdoor environments.
+      Unfortunately, both <em>INF-SEM</em> and <em>RGB</em> agents show poor success rates of 7.1% and 25% in the real world.
+      While the RGB agent seems a bit more promising, we are not able to improve its performance in the real world,
+      after applying commonly-used sim-to-real techniques, such as domain randomization.
+
+      <br><br>For this reason, we trained a new agent, <em>INF-SEM-FEAT</em>, which uses the features of the semantic network as input to the policy.
+      This approach is common in transfer learning in computer vision, but under-explored in visual navigation.
+      This agent achieves satisfactory success rates in both simulation and the real world, 77.90% and 83.3%, respectively. 
+
+      <br><br><h5>Semantic Network</h5>
+      The performance of semantic agents <em>(INF-SEM)</em> and <em>(INF-SEM-FEAT)</em> is highly depends on pre-trained semantic networks.
+      However, when we tested publicly available segmentation networks, we found their performance not satisfactory
+      because they are mainly trained with autonomous-driving datasets and suffer from <a href="https://arxiv.org/abs/1812.06707">perspective shifts</a>
+      from road to sidewalk. This is because the network tends to leverage the location of the surface as a strong prior.
+      Therefore, we slightly adapt the segmentation task and if the robot is standing on the road, we segment the entire road in the field of view.
+      Likewise, if the robot is currently walking on the sidewalk, the segmentation region will be the sidewalk.
+
+      To expand training set of semantic network with additional sidewalk images, we create an augmented dataset that contains 17535 sidewalk perspective
+      and 9704 road images <em>synthesized</em> using <a href="http://playing-for-benchmarks.org/">GTA</a> and 6000 road and 2400 sidewalk images synthesized using CARLA.
+      We combine these newly generated synthesized images with the existing 2975 real images of <a href="https://www.cityscapes-dataset.com">Cityscapes</a> for training.
+
+      <h3>Experiments</h3>
+
+      <h4>Obstacle Avoidance</h4>
+
+
+      <h4>Long-distance Sidewalk Navigation</h4>
+
+      
       <h3>More Videos:</h3>
       <h4>Speedrun</h4>
       <p>
