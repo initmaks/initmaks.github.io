@@ -1,0 +1,9 @@
+/* Style the tab */
+.tab {
+    overflow: hidden;
+  }
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    border-top: none;
+  }
