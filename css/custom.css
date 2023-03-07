@@ -1,0 +1,129 @@
+/* CSS styles */
+.profile-photo {
+    width: 80%;
+    border-radius: 50%;
+    margin-top: 15px;
+}
+
+.venue {
+    color: rgb(128, 128, 128);
+    ;
+}
+
+.video-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio */
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text-column {
+    position: relative;
+}
+
+.container {
+    max-width: 1100px;
+}
+
+.header {
+    margin-top: 6rem;
+    text-align: center;
+}
+
+.navbar {
+    display: none;
+}
+
+/* Larger than phone */
+@media (min-width: 550px) {
+    .header {
+        margin-top: 18rem;
+    }
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+    /* Navbar */
+    .navbar {
+        border-top-width: 0;
+    }
+
+    .navbar,
+    .navbar-spacer {
+        display: block;
+        width: 100%;
+        height: 6.5rem;
+        background: #fff;
+        z-index: 99;
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+    }
+
+    .navbar-spacer {
+        display: none;
+    }
+
+    .navbar>.container {
+        width: 100%;
+    }
+
+    .navbar-list {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        margin-bottom: 0;
+    }
+
+    .navbar-item {
+        position: relative;
+        float: right;
+        margin-bottom: 0;
+    }
+
+    .navbar-link {
+        text-transform: uppercase;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: .2rem;
+        margin-right: 35px;
+        text-decoration: none;
+        line-height: 6.5rem;
+        color: #222;
+    }
+
+    .navbar-link.active {
+        color: #33C3F0;
+    }
+
+    .has-docked-nav .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    .has-docked-nav .navbar-spacer {
+        display: block;
+    }
+
+    /* Re-overiding the width 100% declaration to match size of % based container */
+    .has-docked-nav .navbar>.container {
+        width: 80%;
+    }
+
+}
