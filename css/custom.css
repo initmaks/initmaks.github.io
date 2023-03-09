@@ -3,6 +3,7 @@
     width: 80%;
     border-radius: 50%;
     margin-top: 15px;
+    max-width: 220px;
 }
 
 .venue {
@@ -24,7 +25,8 @@
     /* 16:9 aspect ratio */
 }
 
-.video-container video {
+.video-container video,
+.video-container img {
     position: absolute;
     top: 0;
     left: 0;
@@ -48,13 +50,6 @@
 
 .navbar {
     display: none;
-}
-
-/* Larger than phone */
-@media (min-width: 550px) {
-    .header {
-        margin-top: 18rem;
-    }
 }
 
 /* Larger than tablet */
@@ -126,4 +121,27 @@
         width: 80%;
     }
 
+}
+
+@media only screen and (max-width: 800px) {
+    .video-row {
+      display: flex;
+      flex-direction: column;
+    }
+    .video-row .columns {
+      width: 100%;
+    }
+    .video-container {
+        margin-bottom: 20px;
+    }
+    .profile-row {
+      display: flex;
+      flex-direction: column;
+    }
+    .profile-row .columns {
+      width: 100%;
+    }
+    .hide-on-small {
+        display: none;
+    }
 }
