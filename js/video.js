@@ -3,11 +3,7 @@ const videos = document.querySelectorAll('.no-controls-video');
 
 // Loop through each video element and add event listeners
 videos.forEach(function(video) {
-  // Wait for the video to load
-  video.addEventListener('loadedmetadata', function() {
-    // Hide the video controls
-    video.controls = false;
-  });
+  video.controls = false;
 
   // Add event listeners to toggle the controls
   video.addEventListener('mouseover', function() {
