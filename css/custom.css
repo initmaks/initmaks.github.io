@@ -52,6 +52,14 @@
     display: none;
 }
 
+.project_info {
+    text-align: justify;
+}
+
+.project_title {
+    font-weight: bold;
+}
+
 /* Larger than tablet */
 @media (min-width: 750px) {
     /* Navbar */
