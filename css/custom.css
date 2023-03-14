@@ -52,16 +52,24 @@
     display: none;
 }
 
+.project_title {
+    text-align: justify;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    letter-spacing: 0;
+    display: inline;
+}
+
 .project_info {
+    margin-bottom: 0em;
     text-align: justify;
 }
 
-.project_title {
-    font-weight: bold;
-}
 
 /* Larger than tablet */
 @media (min-width: 750px) {
+
     /* Navbar */
     .navbar {
         border-top-width: 0;
@@ -133,22 +141,27 @@
 
 @media only screen and (max-width: 800px) {
     .video-row {
-      display: flex;
-      flex-direction: column;
+        display: flex;
+        flex-direction: column;
     }
+
     .video-row .columns {
-      width: 100%;
+        width: 100%;
     }
+
     .video-container {
         margin-bottom: 20px;
     }
+
     .profile-row {
-      display: flex;
-      flex-direction: column;
+        display: flex;
+        flex-direction: column;
     }
+
     .profile-row .columns {
-      width: 100%;
+        width: 100%;
     }
+
     .hide-on-small {
         display: none;
     }

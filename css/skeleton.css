@@ -439,26 +439,3 @@ there.
   background-image: -ms-linear-gradient(left , white 2%, #E6E6E6 50%, white 98%);
   background-image: -webkit-gradient( linear, left bottom, right bottom, color-stop(0.02, white), color-stop(0.5, gray), color-stop(0.98, white) );
 }
-
-#project_title {
-  text-align:justify;
-  font-weight: bold;
-  font-size: 1.5rem;
-  line-height: 1.6;
-  letter-spacing: 0;
-  display: inline;
-}
-
-#project_info {
-  /* height: 80px; */
-  /* line-height: 80px; */
-  /* text-align: center; */
-  /* display: table-cell;
-  vertical-align: middle; */
-  margin-bottom: 0em;
-  text-align:justify;
-}
-
-#project_entry {
-  margin-top: 32px;
-}
