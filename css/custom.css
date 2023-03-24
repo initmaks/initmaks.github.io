@@ -1,4 +1,8 @@
 /* CSS styles */
+a {
+    text-decoration: none;
+  }
+
 .profile-photo {
     width: 80%;
     border-radius: 50%;
