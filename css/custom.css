@@ -18,6 +18,10 @@ a {
     vertical-align: middle;
 }
   
+.company-name {
+    margin-top:15px;
+    margin-bottom:15px;
+}
 .center {
     text-align: center;
 }
