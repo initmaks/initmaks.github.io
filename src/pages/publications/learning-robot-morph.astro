@@ -1,0 +1,53 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="On Designing a Learning Robot - Maks Sorokin" description="Improving Morphology for Enhanced Task Performance and Learning">
+  <div class="max-w-4xl mx-auto px-8 py-24">
+    <!-- Back Navigation -->
+    <div class="mb-8">
+      <a href="/publications" class="text-gray-600 hover:text-gray-900 transition-colors">← Back to Publications</a>
+    </div>
+
+    <!-- Paper Header -->
+    <div class="mb-12">
+      <h1 class="text-3xl font-light text-gray-900 mb-4">
+        On Designing a Learning Robot: Improving Morphology for Enhanced Task Performance and Learning
+      </h1>
+      <p class="text-lg text-gray-600 mb-4">
+        <strong>Maks Sorokin</strong>, Chuyuan Fu, Jie Tan, C. Karen Liu, Yunfei Bai, Wenlong Lu, Sehoon Ha, Mohi Khansari
+      </p>
+      <p class="text-gray-500 mb-6">
+        International Conference on Intelligent Robots and Systems (IROS) 2023
+      </p>
+      
+      <!-- Links -->
+      <div class="flex flex-wrap gap-4 text-sm mb-8">
+        <a href="https://learning-robot.github.io/" class="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-lg transition-colors">Project Page</a>
+        <a href="https://www.youtube.com/watch?v=w9B0COjGvfo" class="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-lg transition-colors">Video Overview</a>
+        <a href="https://arxiv.org/pdf/2303.13390.pdf" class="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-lg transition-colors">PDF</a>
+        <a href="https://arxiv.org/abs/2303.13390" class="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-lg transition-colors">arXiv</a>
+      </div>
+    </div>
+
+    <!-- Video -->
+    <div class="mb-12">
+      <div class="aspect-video bg-gray-100 rounded-lg overflow-hidden">
+        <video class="w-full h-full object-cover" controls>
+          <source src="/assets/videos/learning_robot_morph.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <!-- Abstract -->
+    <div class="mb-12">
+      <h2 class="text-xl font-medium text-gray-900 mb-4">Abstract</h2>
+      <p class="text-gray-700 leading-relaxed">
+        We present a learning-oriented morphology optimization framework that accounts for the interplay between the
+        robot's morphology, onboard perception abilities, and their interaction in different tasks.
+        We find that morphologies optimized holistically improve the robot performance by 15-20% on
+        various manipulation tasks, and require 25x less data to match human-expert made morphology performance.
+      </p>
+    </div>
+  </div>
+</Layout> 

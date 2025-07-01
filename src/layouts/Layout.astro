@@ -1,0 +1,56 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description || "Maks Sorokin - Robotics Researcher"} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/assets/icons/icon.png" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1J19VDQYCK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-1J19VDQYCK');
+    </script>
+    
+    <!-- Import Tailwind CSS -->
+    <style>
+      @import '../styles/global.css';
+    </style>
+  </head>
+  <body class="bg-white text-gray-900 font-sans leading-relaxed">
+    <main class="min-h-screen">
+      <slot />
+    </main>
+    
+    <!-- Email reveal script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const emailIcon = document.getElementById('iemail');
+        const emailDiv = document.getElementById('demail');
+        let isShown = false;
+        
+        if (emailIcon && emailDiv) {
+          emailIcon.addEventListener('click', function() {
+            emailDiv.innerHTML = isShown ? '' : 'm' + 'aks' + ' _at_ ' + 'gatech' + '.' + 'e' + 'du';
+            emailDiv.style.opacity = isShown ? '0' : '1';
+            isShown = !isShown;
+          });
+        }
+      });
+    </script>
+  </body>
+</html> 

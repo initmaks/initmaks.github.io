@@ -1,0 +1,389 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Maks Sorokin" description="Robotics Ph.D. student at Georgia Tech working on vision-based robot learning">
+  <!-- Header Navigation -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md">
+    <div class="max-w-6xl mx-auto px-8 py-4">
+      <div class="flex justify-between items-center">
+        <a href="#" class="text-xl font-light text-gray-900 no-underline">Maks Sorokin</a>
+        <nav class="hidden md:flex space-x-8">
+          <a href="#about" class="text-gray-600 hover:text-gray-900 transition-colors scroll-link">About</a>
+          <a href="#publications" class="text-gray-600 hover:text-gray-900 transition-colors scroll-link">Publications</a>
+          <a href="#contact" class="text-gray-600 hover:text-gray-900 transition-colors scroll-link">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="min-h-screen flex items-center pt-20">
+    <div class="max-w-7xl mx-auto px-8 py-24 flex flex-col items-center">
+      <!-- Profile Section -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-16 mb-8 w-full max-w-6xl">
+        <!-- Left Column - Photo -->
+        <div class="md:col-span-1 flex flex-col items-center justify-center pt-8">
+          <img 
+            src="/assets/img/photo.jpg" 
+            alt="Maks Sorokin" 
+            class="w-full max-w-64 rounded-lg"
+          />
+        </div>
+        
+        <!-- Right Column - Info -->
+        <div class="md:col-span-3">
+          <h1 class="text-4xl font-light text-gray-900 mb-6">
+            Maks Sorokin
+          </h1>
+          
+          <div class="text-lg text-gray-600 mb-8 leading-relaxed">
+            <p class="mb-4">
+              I'm an Applied Scientist at the <a href="https://rai-inst.com/" class="text-gray-900 hover:text-gray-600 transition-colors">RAI Institute</a>, developing robot learning systems for whole-body manipulation. My work enables robots to have purposeful dynamic interactions with large objects and environments. I combine reinforcement learning with structural priors to create systems that learn fast and generalize well.
+            </p>
+            <p class="mb-4">
+              Currently finishing my Robotics Ph.D. at Georgia Tech under
+              <a href="https://www.cc.gatech.edu/~sha9/" class="text-gray-900 hover:text-gray-600 transition-colors">Dr. Sehoon Ha</a>
+              and
+              <a href="https://ckllab.stanford.edu/" class="text-gray-900 hover:text-gray-600 transition-colors">Dr. C. Karen Liu</a>, where I've built expertise across vision-based learning, navigation, manipulation, and computational design.
+            </p>
+            <p>
+              My goal is to develop robotic systems capable of learning and executing complex physical tasks with elegance - but at superhuman scale, speed, and precision.
+            </p>
+          </div>
+          
+          <!-- Links -->
+          <div class="flex space-x-6 text-sm">
+            <a href="https://twitter.com/initmaks" class="text-gray-600 hover:text-gray-900 transition-colors">Twitter</a>
+            <a href="https://scholar.google.com/citations?user=tFuFXuMAAAAJ" class="text-gray-600 hover:text-gray-900 transition-colors">Google Scholar</a>
+            <a href="https://linkedin.com/in/initmaks" class="text-gray-600 hover:text-gray-900 transition-colors">LinkedIn</a>
+            <a href="/assets/pdfs/CV.pdf" class="text-gray-600 hover:text-gray-900 transition-colors">CV</a>
+            <button id="email-btn" class="text-gray-600 hover:text-gray-900 transition-colors" title="Email">Contact</button>
+          </div>
+          
+          <div id="email-display" class="text-sm text-gray-500 font-mono mt-2 opacity-0 transition-opacity duration-300"></div>
+        </div>
+      </div>
+
+      <!-- Affiliations -->
+      <div class="w-full max-w-6xl">
+        <div class="flex flex-col md:flex-row md:justify-center space-y-6 md:space-y-0">
+          <div class="flex items-start space-x-6 md:mr-24">
+            <div class="flex-shrink-0 flex items-start">
+              <a href="https://rai-inst.com/" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition-opacity">
+                <img src="/assets/icons/org/rai_square.png" alt="RAI Institute" class="h-20 w-auto max-w-24 object-contain rounded-lg" />
+              </a>
+            </div>
+            <div class="min-w-0 flex-1">
+              <div class="text-sm text-gray-500 mb-1">2024 - Present</div>
+              <div class="font-medium text-gray-900 mb-1">Applied Scientist</div>
+              <a href="https://rai-inst.com/" target="_blank" rel="noopener noreferrer" class="text-gray-600 leading-snug mb-1 hover:text-gray-800 transition-colors cursor-pointer no-underline">RAI Institute</a>
+              <div class="text-[10px] text-gray-500">(prev. known as Boston Dynamics AI Institute)</div>
+            </div>
+          </div>
+                  
+          <div class="flex items-start space-x-6 md:mr-32">
+            <div class="flex-shrink-0 flex items-start">
+              <a href="https://everydayrobots.com/" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition-opacity">
+                <img src="/assets/icons/org/EverydayRobots2.gif" alt="Everyday Robots" class="h-20 w-auto max-w-24 object-contain" />
+              </a>
+            </div>
+            <div class="min-w-0 flex-1">
+              <div class="text-sm text-gray-500 mb-1">2021 - 2022</div>
+              <div class="font-medium text-gray-900 mb-1">AI Residency</div>
+              <a href="https://x.company/" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-800 transition-colors cursor-pointer no-underline">Google X</a>
+            </div>
+          </div>
+          
+          <div class="flex items-start space-x-6">
+            <div class="flex-shrink-0 flex items-start">
+              <a href="https://www.gatech.edu/" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition-opacity">
+                <img src="/assets/icons/org/GeorgiaTech_square.png" alt="Georgia Tech" class="h-20 w-auto max-w-24 object-contain" />
+              </a>
+            </div>
+            <div class="min-w-0 flex-1">
+              <div class="text-sm text-gray-500 mb-1">2020 - Present</div>
+              <div class="font-medium text-gray-900 mb-1">PhD in Robotics</div>
+              <a href="https://www.gatech.edu/" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-800 transition-colors cursor-pointer no-underline">Georgia Tech</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- Publications Section -->
+  <section id="publications" class="py-20">
+    <div class="max-w-7xl mx-auto px-8">
+      <!-- Latest -->
+      <div class="mb-20">
+        <h2 class="text-3xl font-light text-gray-900 mb-16">Latest</h2>
+        
+        <!-- Jacta Paper -->
+        <div class="max-w-6xl mx-auto">
+          <!-- Video Section -->
+          <div class="mb-8">
+            <div class="aspect-video bg-gray-100 rounded-lg overflow-hidden">
+              <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+                <source src="/assets/videos/jacta_stool_lift.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          
+          <!-- Text Section -->
+          <div class="text-center">
+            <h3 class="text-2xl font-medium text-gray-900 mb-4">
+              <a href="https://jacta-manipulation.github.io/" class="hover:text-gray-600 transition-colors">
+                Jacta: A Versatile Planner for Learning Dexterous and Whole-body Manipulation
+              </a>
+            </h3>
+            <p class="text-gray-600 mb-3">
+              Jan Brüdigam, Ali Adeeb Abbas, <strong>Maks Sorokin</strong>, Kuan Fang, Brandon Hung, Maya Guru, Stefan Sosnowski, Jiuguang Wang, Sandra Hirche, Simon Le Cleac'h
+            </p>
+            <p class="text-sm text-gray-500 mb-6">
+              IEEE Robotics and Automation Letters (RA-L) 2024
+            </p>
+            <p class="text-gray-700 mb-6 leading-relaxed max-w-6xl mx-auto">
+              We combined reinforcement learning with sampling-based algorithms to solve contact-rich manipulation tasks. While sampling-based planners can quickly find successful trajectories for complex manipulation tasks, the solutions often lack robustness. We leveraged a reinforcement learning algorithm to enhance the robustness of a set of planner demonstrations, distilling them into a single policy that can handle variations and uncertainties in real-world scenarios.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 text-sm">
+              <a href="https://jacta-manipulation.github.io/" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">project page</a>
+              <a href="https://github.com/bdaiinstitute/jacta-manipulation" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">code</a>
+              <a href="https://arxiv.org/pdf/2408.01258.pdf" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">pdf</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Featured -->
+      <div class="mb-16">
+        <h2 class="text-3xl font-light text-gray-900 mb-16">Featured</h2>
+        
+        <div class="space-y-16">
+
+        <!-- Hardware Design Paper -->
+        <div class="flex flex-col lg:flex-row gap-8 items-center">
+          <div class="lg:w-1/3">
+            <div class="aspect-video bg-gray-100 rounded-lg overflow-hidden">
+              <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+                <source src="/assets/videos/learning_robot_morph.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="lg:w-2/3">
+            <h3 class="text-xl font-medium text-gray-900 mb-3">
+              <a href="https://learning-robot.github.io/" class="hover:text-gray-600 transition-colors">
+                On Designing a Learning Robot: Improving Morphology for Enhanced Task Performance and Learning
+              </a>
+            </h3>
+            <p class="text-gray-600 mb-2">
+              <strong>Maks Sorokin</strong>, Chuyuan Fu, Jie Tan, C. Karen Liu, Yunfei Bai, Wenlong Lu, Sehoon Ha, Mohi Khansari
+            </p>
+            <p class="text-sm text-gray-500 mb-4">
+              International Conference on Intelligent Robots and Systems (IROS) 2023
+            </p>
+            <p class="text-gray-700 mb-4 leading-relaxed">
+              We present a learning-oriented morphology optimization framework that accounts for the interplay between the
+              robot's morphology, onboard perception abilities, and their interaction in different tasks.
+              We find that morphologies optimized holistically improve the robot performance by 15-20% on
+              various manipulation tasks, and require 25x less data to match human-expert made morphology performance.
+            </p>
+            <div class="flex flex-wrap gap-4 text-sm">
+              <a href="https://learning-robot.github.io/" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">project page</a>
+              <a href="https://www.youtube.com/watch?v=w9B0COjGvfo" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">video</a>
+              <a href="https://arxiv.org/pdf/2303.13390.pdf" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">pdf</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Paper -->
+        <div class="flex flex-col lg:flex-row gap-8 items-center">
+          <div class="lg:w-1/3">
+            <div class="aspect-video bg-gray-100 rounded-lg overflow-hidden">
+              <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+                <source src="/assets/videos/urban_navigation.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="lg:w-2/3">
+            <h3 class="text-xl font-medium text-gray-900 mb-3">
+              <a href="/publications/sidewalk-navigation" class="hover:text-gray-600 transition-colors">
+                Learning to Navigate Sidewalks in Outdoor Environments
+              </a>
+            </h3>
+            <p class="text-gray-600 mb-2">
+              <strong>Maks Sorokin</strong>, Jie Tan, C. Karen Liu, Sehoon Ha
+            </p>
+            <p class="text-sm text-gray-500 mb-4">
+              IEEE Robotics and Automation Letters (RA-L) 2022
+            </p>
+            <p class="text-gray-700 mb-4 leading-relaxed">
+              We design a system which enables zero-shot vision-based policy transfer to the real-world outdoor environments
+              for sidewalk navigation task. Our approach is evaluated on a quadrupedal robot navigating sidewalks in the real world walking 3.2 kilometers
+              with a limited number of human interventions.
+            </p>
+            <div class="flex flex-wrap gap-4 text-sm">
+              <a href="/publications/sidewalk-navigation" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">project page</a>
+              <a href="https://www.youtube.com/watch?v=JsAZy3YETwQ" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">video</a>
+              <a href="https://arxiv.org/pdf/2109.05603.pdf" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">pdf</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-16">
+        <a href="/publications" class="inline-flex items-center px-6 py-3 text-lg font-medium text-gray-900 bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors">
+          View all publications →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-8 text-center">
+      <h2 class="text-3xl font-light text-gray-900 mb-8">Contact</h2>
+      
+      <div class="flex justify-center space-x-6 mb-4">
+        <a href="https://twitter.com/initmaks" class="text-gray-600 hover:text-gray-900 transition-colors">Twitter</a>
+        <a href="https://scholar.google.com/citations?user=tFuFXuMAAAAJ" class="text-gray-600 hover:text-gray-900 transition-colors">Scholar</a>
+        <a href="https://linkedin.com/in/initmaks" class="text-gray-600 hover:text-gray-900 transition-colors">LinkedIn</a>
+        <a href="/assets/pdfs/CV.pdf" class="text-gray-600 hover:text-gray-900 transition-colors">CV</a>
+        <button id="email-btn-footer" class="text-gray-600 hover:text-gray-900 transition-colors" title="Email">Email</button>
+      </div>
+      
+      <div id="email-display-footer" class="text-sm text-gray-500 font-mono opacity-0 transition-opacity duration-300"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 border-t border-gray-200">
+    <div class="max-w-4xl mx-auto px-8 text-center">
+      <div class="text-sm text-gray-500 space-y-2">
+        <p>© 2025 Maks Sorokin</p>
+        <p>Built with <a href="https://astro.build" class="hover:text-gray-700 transition-colors">Astro</a> and <a href="https://tailwindcss.com" class="hover:text-gray-700 transition-colors">Tailwind CSS</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Fixed Scroll Indicator -->
+  <div id="scroll-indicator" class="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-40 opacity-0 transition-opacity duration-500">
+    <div class="inline-flex items-center space-x-2 text-sm text-gray-600 hover:text-gray-900 transition-colors cursor-pointer bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg border border-gray-200" onclick="document.getElementById('publications').scrollIntoView({behavior: 'smooth'})">
+      <svg class="w-4 h-4 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Email obfuscation script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('.scroll-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          const targetSection = document.querySelector(targetId);
+          if (targetSection) {
+            targetSection.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+
+      // Email functionality
+      const emailBtns = [document.getElementById('email-btn'), document.getElementById('email-btn-footer')];
+      const emailDisplays = [document.getElementById('email-display'), document.getElementById('email-display-footer')];
+      let isShown = false;
+      
+      // Base64 encoded email for better obfuscation
+      const encodedEmail = 'bWtzbXNya25AZ21haWwuY29t';
+      
+      emailBtns.forEach((btn, index) => {
+        btn?.addEventListener('click', function() {
+          if (!isShown) {
+            const email = atob(encodedEmail);
+            emailDisplays.forEach(display => {
+              display.textContent = email;
+              display.style.opacity = '1';
+            });
+            isShown = true;
+          } else {
+            emailDisplays.forEach(display => {
+              display.style.opacity = '0';
+            });
+            isShown = false;
+          }
+        });
+      });
+
+      // Function to check current section and update navigation
+      function updateNavigation() {
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.scroll-link');
+        
+        let current = '';
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop - 100;
+          const sectionHeight = section.offsetHeight;
+          if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+            current = section.getAttribute('id');
+          }
+        });
+
+        // Update navigation links
+        navLinks.forEach(link => {
+          link.classList.remove('text-gray-900');
+          link.classList.add('text-gray-600');
+          if (link.getAttribute('href') === `#${current}`) {
+            link.classList.remove('text-gray-600');
+            link.classList.add('text-gray-900');
+          }
+        });
+      }
+
+      // Function to show scroll indicator on initial load
+      function showScrollIndicator() {
+        const scrollIndicator = document.getElementById('scroll-indicator');
+        const aboutSection = document.getElementById('about');
+        
+        // Only show if we're at the top of the page (in about section)
+        if (window.scrollY < 50 && scrollIndicator) {
+          scrollIndicator.style.opacity = '1';
+        }
+      }
+
+      // Hide scroll indicator on any scroll
+      function hideScrollIndicator() {
+        const scrollIndicator = document.getElementById('scroll-indicator');
+        if (scrollIndicator) {
+          scrollIndicator.style.opacity = '0';
+        }
+      }
+
+      // Update navigation on scroll and hide indicator immediately
+      window.addEventListener('scroll', function() {
+        updateNavigation();
+        hideScrollIndicator();
+      });
+      
+      // Show indicator on initial load if at top of page
+      setTimeout(showScrollIndicator, 100);
+    });
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* Ensure sections have proper spacing for navigation */
+    section {
+      scroll-margin-top: 80px;
+    }
+  </style>
+</Layout>

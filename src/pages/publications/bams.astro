@@ -1,0 +1,52 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Bootstrap Across Multiple Scales - Maks Sorokin" description="Relax, it doesn't matter how you get there!">
+  <div class="max-w-4xl mx-auto px-8 py-24">
+    <!-- Back Navigation -->
+    <div class="mb-8">
+      <a href="/publications" class="text-gray-600 hover:text-gray-900 transition-colors">← Back to Publications</a>
+    </div>
+
+    <!-- Paper Header -->
+    <div class="mb-12">
+      <h1 class="text-3xl font-light text-gray-900 mb-4">
+        Relax, it doesn't matter how you get there!
+      </h1>
+      <p class="text-lg text-gray-600 mb-4">
+        Mehdi Azabou, Michael Mendelson, <strong>Maks Sorokin</strong>, Shantanu Thakoor, Nauman Ahad, Carolina Urzay, Eva L Dyer
+      </p>
+      <p class="text-gray-500 mb-6">
+        Neural Information Processing Systems (NeurIPS) 2023 - Spotlight
+      </p>
+      
+      <!-- Links -->
+      <div class="flex flex-wrap gap-4 text-sm mb-8">
+        <a href="https://multiscale-behavior.github.io/" class="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-lg transition-colors">Project Page</a>
+        <a href="https://arxiv.org/pdf/2303.08811.pdf" class="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-lg transition-colors">PDF</a>
+        <a href="https://arxiv.org/abs/2303.08811" class="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-lg transition-colors">arXiv</a>
+      </div>
+    </div>
+
+    <!-- Video -->
+    <div class="mb-12">
+      <div class="aspect-video bg-gray-100 rounded-lg overflow-hidden">
+        <video class="w-full h-full object-cover" controls>
+          <source src="/assets/videos/behavior_representations.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <!-- Abstract -->
+    <div class="mb-12">
+      <h2 class="text-xl font-medium text-gray-900 mb-4">Abstract</h2>
+      <p class="text-gray-700 leading-relaxed">
+        We introduce Bootstrap Across Multiple Scales (BAMS), a multi-scale self-supervised representation learning
+        model for behavior analysis. We combine a pooling module that aggregates features extracted over encoders with different
+        temporal receptive fields, and design latent objectives to bootstrap the representations in each respective
+        space to encourage disentanglement across different timescales.
+      </p>
+    </div>
+  </div>
+</Layout> 

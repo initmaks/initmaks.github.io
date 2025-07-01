@@ -1,0 +1,75 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Jacta: A Versatile Planner for Learning Dexterous and Whole-body Manipulation - Maks Sorokin">
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-sm z-50 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-8 py-4">
+      <div class="flex justify-between items-center">
+        <a href="/" class="text-xl font-light text-gray-900 hover:text-gray-600 transition-colors">
+          Maks Sorokin
+        </a>
+        <div class="flex space-x-8">
+          <a href="/#about" class="text-gray-700 hover:text-gray-900 transition-colors">About</a>
+          <a href="/publications" class="text-gray-700 hover:text-gray-900 transition-colors">Publications</a>
+          <a href="/#contact" class="text-gray-700 hover:text-gray-900 transition-colors">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="pt-20">
+    <div class="max-w-4xl mx-auto px-8 py-24">
+      <!-- Back Link -->
+      <div class="mb-8">
+        <a href="/publications" class="text-gray-600 hover:text-gray-900 transition-colors">
+          ← Back to Publications
+        </a>
+      </div>
+
+      <!-- Header -->
+      <div class="mb-12">
+        <h1 class="text-3xl font-light text-gray-900 mb-6">
+          Jacta: A Versatile Planner for Learning Dexterous and Whole-body Manipulation
+        </h1>
+        
+        <div class="text-gray-600 mb-4">
+          Jan Brüdigam¹, Ali Adeeb Abbas², <strong>Maks Sorokin²</strong>, Kuan Fang², Brandon Hung², Maya Guru², Stefan Sosnowski¹, Jiuguang Wang², Sandra Hirche¹, Simon Le Cleac'h²
+        </div>
+        
+        <div class="text-sm text-gray-500 mb-6">
+          ¹TU Munich, ²Boston Dynamics AI Institute
+        </div>
+        
+        <div class="text-sm text-gray-500 mb-8">
+          IEEE Robotics and Automation Letters (RA-L) 2024
+        </div>
+
+        <!-- Links -->
+        <div class="flex flex-wrap gap-4 text-sm">
+          <a href="https://jacta-manipulation.github.io/" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">project page</a>
+          <a href="https://github.com/bdaiinstitute/jacta-manipulation" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">code</a>
+          <a href="https://arxiv.org/pdf/2408.01258.pdf" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">pdf</a>
+        </div>
+      </div>
+
+      <!-- Abstract -->
+      <div class="mb-12">
+        <h2 class="text-xl font-medium text-gray-900 mb-4">Abstract</h2>
+        <p class="text-gray-700 leading-relaxed">
+          Robotic manipulation is challenging due to discontinuous dynamics, as well as high-dimensional state and action spaces. Data-driven approaches that succeed in manipulation tasks require large amounts of data and expert demonstrations, typically from humans. Existing planners are restricted to specific systems and often depend on specialized algorithms for using demonstrations. Therefore, we introduce a flexible motion planner tailored to dexterous and whole-body manipulation tasks. Our planner creates readily usable demonstrations for reinforcement learning algorithms, eliminating the need for additional training pipeline complexities. With this approach, we can efficiently learn policies for complex manipulation tasks, where traditional reinforcement learning alone only makes little progress. Furthermore, we demonstrate that learned policies are transferable to real robotic systems for solving complex dexterous manipulation tasks.
+        </p>
+      </div>
+
+      <!-- Description -->
+      <div class="mb-12">
+        <h2 class="text-xl font-medium text-gray-900 mb-4">Approach</h2>
+        <p class="text-gray-700 leading-relaxed">
+          We combined reinforcement learning with sampling-based algorithms to solve contact-rich manipulation tasks. While sampling-based planners can quickly find successful trajectories for complex manipulation tasks, the solutions often lack robustness. We leveraged a reinforcement learning algorithm to enhance the robustness of a set of planner demonstrations, distilling them into a single policy that can handle variations and uncertainties in real-world scenarios.
+        </p>
+      </div>
+    </div>
+  </main>
+</Layout> 
