@@ -1,0 +1,52 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Learning Human Search Behavior - Maks Sorokin" description="Learning Human Search Behavior from Egocentric View">
+  <div class="max-w-4xl mx-auto px-8 py-24">
+    <!-- Back Navigation -->
+    <div class="mb-8">
+      <a href="/publications" class="text-gray-600 hover:text-gray-900 transition-colors">← Back to Publications</a>
+    </div>
+
+    <!-- Paper Header -->
+    <div class="mb-12">
+      <h1 class="text-3xl font-light text-gray-900 mb-4">
+        Learning Human Search Behavior from Egocentric View
+      </h1>
+      <p class="text-lg text-gray-600 mb-4">
+        <strong>Maks Sorokin</strong>, Wenhao Yu, Sehoon Ha, C. Karen Liu
+      </p>
+      <p class="text-gray-500 mb-6">
+        EUROGRAPHICS 2021
+      </p>
+      
+      <!-- Links -->
+      <div class="flex flex-wrap gap-4 text-sm mb-8">
+        <a href="https://arxiv.org/pdf/2011.03618.pdf" class="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-lg transition-colors">PDF</a>
+        <a href="https://arxiv.org/abs/2011.03618" class="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-lg transition-colors">arXiv</a>
+        <a href="https://www.youtube.com/watch?v=LvSHpmjt8pU" class="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-lg transition-colors">Video</a>
+        <a href="https://www.youtube.com/watch?v=NzsCT3a7rpY" class="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-lg transition-colors">Talk (20 min)</a>
+      </div>
+    </div>
+
+    <!-- Video -->
+    <div class="mb-12">
+      <div class="aspect-video bg-gray-100 rounded-lg overflow-hidden">
+        <video class="w-full h-full object-cover" controls>
+          <source src="/assets/videos/object_search_animation.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <!-- Abstract -->
+    <div class="mb-12">
+      <h2 class="text-xl font-medium text-gray-900 mb-4">Abstract</h2>
+      <p class="text-gray-700 leading-relaxed">
+        We train vision-based agent to perform object searching in photorealistic 3D scene.
+        And propose a motion synthesis mechanism for head motion re-targeting.
+        Using which we enable object searching behaviour with animated human character (PFNN/NSM).
+      </p>
+    </div>
+  </div>
+</Layout> 

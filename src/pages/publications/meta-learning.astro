@@ -1,0 +1,50 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Few Shot Adaptation of Visual Navigation - Maks Sorokin" description="A Few Shot Adaptation of Visual Navigation Skills to New Observations using Meta-Learning">
+  <div class="max-w-4xl mx-auto px-8 py-24">
+    <!-- Back Navigation -->
+    <div class="mb-8">
+      <a href="/publications" class="text-gray-600 hover:text-gray-900 transition-colors">← Back to Publications</a>
+    </div>
+
+    <!-- Paper Header -->
+    <div class="mb-12">
+      <h1 class="text-3xl font-light text-gray-900 mb-4">
+        A Few Shot Adaptation of Visual Navigation Skills to New Observations using Meta-Learning
+      </h1>
+      <p class="text-lg text-gray-600 mb-4">
+        Qian Luo, <strong>Maks Sorokin</strong>, Sehoon Ha
+      </p>
+      <p class="text-gray-500 mb-6">
+        The IEEE International Conference on Robotics and Automation (ICRA) 2021
+      </p>
+      
+      <!-- Links -->
+      <div class="flex flex-wrap gap-4 text-sm mb-8">
+        <a href="https://arxiv.org/pdf/2011.03609.pdf" class="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-lg transition-colors">PDF</a>
+        <a href="http://arxiv.org/abs/2011.03609" class="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-lg transition-colors">arXiv</a>
+      </div>
+    </div>
+
+    <!-- Video -->
+    <div class="mb-12">
+      <div class="aspect-video bg-gray-100 rounded-lg overflow-hidden">
+        <video class="w-full h-full object-cover" controls>
+          <source src="/assets/videos/sensor_height_adaptation.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <!-- Abstract -->
+    <div class="mb-12">
+      <h2 class="text-xl font-medium text-gray-900 mb-4">Abstract</h2>
+      <p class="text-gray-700 leading-relaxed">
+        We show how vision-based navigation agents can be trained to adapt to new sensor configurations with only
+        three shots of experience. Rapid adaptation is achieved by introducing a bottleneck between perception and control networks, and through
+        the perception component's meta-adaptation.
+      </p>
+    </div>
+  </div>
+</Layout> 

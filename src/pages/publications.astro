@@ -1,0 +1,418 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Publications & Research - Maks Sorokin">
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-sm z-50 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-8 py-4">
+      <div class="flex justify-between items-center">
+        <a href="/" class="text-xl font-light text-gray-900 hover:text-gray-600 transition-colors">
+          Maks Sorokin
+        </a>
+        <div class="flex space-x-8">
+          <a href="/#about" class="text-gray-700 hover:text-gray-900 transition-colors">About</a>
+          <a href="/#publications" class="text-gray-700 hover:text-gray-900 transition-colors">Publications</a>
+          <a href="/#contact" class="text-gray-700 hover:text-gray-900 transition-colors">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="pt-20">
+    <div class="max-w-7xl mx-auto px-8 py-24">
+      <!-- Header -->
+      <div class="mb-16 text-center">
+        <h1 class="text-4xl font-light text-gray-900 mb-4">Publications & Research</h1>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          My research focuses on vision-based robot learning and its applications in navigation, manipulation, and computational design.
+        </p>
+      </div>
+
+      <!-- Latest Work Section -->
+      <div class="mb-20">
+        <h2 class="text-2xl font-light text-gray-900 mb-12 border-b border-gray-200 pb-4">Latest Work</h2>
+        
+        <!-- Jacta Paper -->
+        <div class="flex flex-col lg:flex-row gap-8 mb-16 items-center">
+          <div class="lg:w-1/3">
+            <div class="aspect-video bg-gray-100 rounded-lg overflow-hidden">
+              <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+                <source src="/assets/videos/jacta_stool_lift.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="lg:w-2/3">
+            <h3 class="text-xl font-medium text-gray-900 mb-3">
+              <a href="https://jacta-manipulation.github.io/" class="hover:text-gray-600 transition-colors">
+                Jacta: A Versatile Planner for Learning Dexterous and Whole-body Manipulation
+              </a>
+            </h3>
+            <p class="text-gray-600 mb-2">
+              Jan Brüdigam, Ali Adeeb Abbas, <strong>Maks Sorokin</strong>, Kuan Fang, Brandon Hung, Maya Guru, Stefan Sosnowski, Jiuguang Wang, Sandra Hirche, Simon Le Cleac'h
+            </p>
+            <p class="text-sm text-gray-500 mb-4">
+              IEEE Robotics and Automation Letters (RA-L) 2024
+            </p>
+            <p class="text-gray-700 mb-4 leading-relaxed">
+              We combined reinforcement learning with sampling-based algorithms to solve contact-rich manipulation tasks. While sampling-based planners can quickly find successful trajectories for complex manipulation tasks, the solutions often lack robustness. We leveraged a reinforcement learning algorithm to enhance the robustness of a set of planner demonstrations, distilling them into a single policy that can handle variations and uncertainties in real-world scenarios.
+            </p>
+                         <div class="flex flex-wrap gap-4 text-sm">
+               <a href="/publications/jacta" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">full details</a>
+               <a href="https://jacta-manipulation.github.io/" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">project page</a>
+               <a href="https://github.com/bdaiinstitute/jacta-manipulation" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">code</a>
+               <a href="https://arxiv.org/pdf/2408.01258.pdf" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">pdf</a>
+             </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Publications Section -->
+      <div class="mb-20">
+        <h2 class="text-2xl font-light text-gray-900 mb-12 border-b border-gray-200 pb-4">Publications</h2>
+        
+        <div class="space-y-16">
+          <!-- Learning Robot Paper -->
+          <div class="flex flex-col lg:flex-row gap-8 items-center">
+            <div class="lg:w-1/3">
+              <div class="aspect-video bg-gray-100 rounded-lg overflow-hidden">
+                <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+                  <source src="/assets/videos/learning_robot_morph.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="lg:w-2/3">
+              <h3 class="text-xl font-medium text-gray-900 mb-3">
+                <a href="https://learning-robot.github.io/" class="hover:text-gray-600 transition-colors">
+                  On Designing a Learning Robot: Improving Morphology for Enhanced Task Performance and Learning
+                </a>
+              </h3>
+              <p class="text-gray-600 mb-2">
+                <strong>Maks Sorokin</strong>, Chuyuan Fu, Jie Tan, C. Karen Liu, Yunfei Bai, Wenlong Lu, Sehoon Ha, Mohi Khansari
+              </p>
+              <p class="text-sm text-gray-500 mb-4">
+                International Conference on Intelligent Robots and Systems (IROS) 2023
+              </p>
+              <p class="text-gray-700 mb-4 leading-relaxed">
+                We present a learning-oriented morphology optimization framework that accounts for the interplay between the
+                robot's morphology, onboard perception abilities, and their interaction in different tasks.
+                We find that morphologies optimized holistically improve the robot performance by 15-20% on
+                various manipulation tasks, and require 25x less data to match human-expert made morphology performance.
+              </p>
+              <div class="flex flex-wrap gap-4 text-sm">
+                <a href="/publications/learning-robot-morph" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">full details</a>
+                <a href="https://learning-robot.github.io/" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">project page</a>
+                <a href="https://www.youtube.com/watch?v=w9B0COjGvfo" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">video</a>
+                <a href="https://arxiv.org/pdf/2303.13390.pdf" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">pdf</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Human Motion Control Paper -->
+          <div class="flex flex-col lg:flex-row gap-8 items-center">
+            <div class="lg:w-1/3">
+              <div class="aspect-video bg-gray-100 rounded-lg overflow-hidden">
+                <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+                  <source src="/assets/videos/humanconquad.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="lg:w-2/3">
+              <h3 class="text-xl font-medium text-gray-900 mb-3">
+                <a href="https://sites.google.com/view/humanconquad" class="hover:text-gray-600 transition-colors">
+                  Human Motion Control of Quadrupedal Robots using Deep Reinforcement Learning
+                </a>
+              </h3>
+              <p class="text-gray-600 mb-2">
+                Sunwoo Kim, <strong>Maks Sorokin</strong>, Jehee Lee, Sehoon Ha
+              </p>
+              <p class="text-sm text-gray-500 mb-4">
+                Proceedings of Robotics: Science and Systems (RSS) 2022
+              </p>
+              <p class="text-gray-700 mb-4 leading-relaxed">
+                We propose a novel motion control system that allows a human user to operate various motor tasks seamlessly
+                on a quadrupedal robot. Using our system, a user can execute a variety of motor tasks, including standing, sitting, tilting,
+                manipulating, walking, and turning, on simulated and real quadrupeds.
+              </p>
+              <div class="flex flex-wrap gap-4 text-sm">
+                <a href="/publications/human-motion-control" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">full details</a>
+                <a href="https://sites.google.com/view/humanconquad" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">project page</a>
+                <a href="https://arxiv.org/pdf/2204.13336.pdf" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">pdf</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- BAMS Paper -->
+          <div class="flex flex-col lg:flex-row gap-8 items-center">
+            <div class="lg:w-1/3">
+              <div class="aspect-video bg-gray-100 rounded-lg overflow-hidden">
+                <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+                  <source src="/assets/videos/behavior_representations.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="lg:w-2/3">
+              <h3 class="text-xl font-medium text-gray-900 mb-3">
+                <a href="https://multiscale-behavior.github.io/" class="hover:text-gray-600 transition-colors">
+                  Relax, it doesn't matter how you get there!
+                </a>
+              </h3>
+              <p class="text-gray-600 mb-2">
+                Mehdi Azabou, Michael Mendelson, <strong>Maks Sorokin</strong>, Shantanu Thakoor, Nauman Ahad, Carolina Urzay, Eva L Dyer
+              </p>
+              <p class="text-sm text-gray-500 mb-4">
+                Neural Information Processing Systems (NeurIPS) 2023 - Spotlight
+              </p>
+              <p class="text-gray-700 mb-4 leading-relaxed">
+                We introduce Bootstrap Across Multiple Scales (BAMS), a multi-scale self-supervised representation learning
+                model for behavior analysis. We combine a pooling module that aggregates features extracted over encoders with different
+                temporal receptive fields, and design latent objectives to bootstrap the representations in each respective
+                space to encourage disentanglement across different timescales.
+              </p>
+              <div class="flex flex-wrap gap-4 text-sm">
+                <a href="/publications/bams" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">full details</a>
+                <a href="https://multiscale-behavior.github.io/" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">project page</a>
+                <a href="https://arxiv.org/pdf/2303.08811.pdf" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">pdf</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sidewalk Navigation Paper -->
+          <div class="flex flex-col lg:flex-row gap-8 items-center">
+            <div class="lg:w-1/3">
+              <div class="aspect-video bg-gray-100 rounded-lg overflow-hidden">
+                <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+                  <source src="/assets/videos/urban_navigation.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="lg:w-2/3">
+              <h3 class="text-xl font-medium text-gray-900 mb-3">
+                <a href="/publications/sidewalk-navigation" class="hover:text-gray-600 transition-colors">
+                  Learning to Navigate Sidewalks in Outdoor Environments
+                </a>
+              </h3>
+              <p class="text-gray-600 mb-2">
+                <strong>Maks Sorokin</strong>, Jie Tan, C. Karen Liu, Sehoon Ha
+              </p>
+              <p class="text-sm text-gray-500 mb-4">
+                IEEE Robotics and Automation Letters (RA-L) 2022
+              </p>
+              <p class="text-gray-700 mb-4 leading-relaxed">
+                We design a system which enables zero-shot vision-based policy transfer to the real-world outdoor environments
+                for sidewalk navigation task. Our approach is evaluated on a quadrupedal robot navigating sidewalks in the real world walking 3.2 kilometers
+                with a limited number of human interventions.
+              </p>
+              <div class="flex flex-wrap gap-4 text-sm">
+                <a href="/publications/sidewalk-navigation" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">full details</a>
+                <a href="/publications/sidewalk-navigation" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">project page</a>
+                <a href="https://arxiv.org/pdf/2109.05603.pdf" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">pdf</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Human Search Behavior Paper -->
+          <div class="flex flex-col lg:flex-row gap-8 items-center">
+            <div class="lg:w-1/3">
+              <div class="aspect-video bg-gray-100 rounded-lg overflow-hidden">
+                <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+                  <source src="/assets/videos/object_search_animation.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="lg:w-2/3">
+              <h3 class="text-xl font-medium text-gray-900 mb-3">
+                <a href="/publications/human-search-behavior" class="hover:text-gray-600 transition-colors">
+                  Learning Human Search Behavior from Egocentric View
+                </a>
+              </h3>
+              <p class="text-gray-600 mb-2">
+                <strong>Maks Sorokin</strong>, Wenhao Yu, Sehoon Ha, C. Karen Liu
+              </p>
+              <p class="text-sm text-gray-500 mb-4">
+                EUROGRAPHICS 2021
+              </p>
+              <p class="text-gray-700 mb-4 leading-relaxed">
+                We train vision-based agent to perform object searching in photorealistic 3D scene.
+                And propose a motion synthesis mechanism for head motion re-targeting.
+                Using which we enable object searching behaviour with animated human character (PFNN/NSM).
+              </p>
+              <div class="flex flex-wrap gap-4 text-sm">
+                <a href="/publications/human-search-behavior" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">full details</a>
+                <a href="https://arxiv.org/pdf/2011.03618.pdf" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">pdf</a>
+                <a href="https://www.youtube.com/watch?v=LvSHpmjt8pU" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">video</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Meta-Learning Paper -->
+          <div class="flex flex-col lg:flex-row gap-8 items-center">
+            <div class="lg:w-1/3">
+              <div class="aspect-video bg-gray-100 rounded-lg overflow-hidden">
+                <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+                  <source src="/assets/videos/sensor_height_adaptation.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="lg:w-2/3">
+              <h3 class="text-xl font-medium text-gray-900 mb-3">
+                <a href="/publications/meta-learning" class="hover:text-gray-600 transition-colors">
+                  A Few Shot Adaptation of Visual Navigation Skills to New Observations using Meta-Learning
+                </a>
+              </h3>
+              <p class="text-gray-600 mb-2">
+                Qian Luo, <strong>Maks Sorokin</strong>, Sehoon Ha
+              </p>
+              <p class="text-sm text-gray-500 mb-4">
+                The IEEE International Conference on Robotics and Automation (ICRA) 2021
+              </p>
+              <p class="text-gray-700 mb-4 leading-relaxed">
+                We show how vision-based navigation agents can be trained to adapt to new sensor configurations with only
+                three shots of experience. Rapid adaptation is achieved by introducing a bottleneck between perception and control networks, and through
+                the perception component's meta-adaptation.
+              </p>
+              <div class="flex flex-wrap gap-4 text-sm">
+                <a href="/publications/meta-learning" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">full details</a>
+                <a href="https://arxiv.org/pdf/2011.03609.pdf" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">pdf</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Archive Section -->
+      <div class="mb-20">
+        <h2 class="text-2xl font-light text-gray-900 mb-12 border-b border-gray-200 pb-4">Archive</h2>
+        
+        <!-- Collapsible Archive Content -->
+        <div class="archive-section">
+          <button class="archive-toggle cursor-pointer text-gray-600 hover:text-gray-900 transition-colors mb-8 flex items-center w-full text-left">
+            <span class="mr-2 transform transition-transform duration-200 archive-arrow">▶</span>
+            <span>Earlier Projects & Research (2017-2019)</span>
+          </button>
+          
+          <div class="archive-content hidden space-y-16 mt-8">
+            <!-- Real2Sim Project -->
+            <div class="flex flex-col lg:flex-row gap-8 items-center">
+              <div class="lg:w-1/3">
+                <div class="aspect-video bg-gray-100 rounded-lg overflow-hidden flex items-center justify-center">
+                  <img src="/assets/img/sim2sim.png" alt="Real2Sim" class="max-w-full max-h-full object-contain">
+                </div>
+              </div>
+              <div class="lg:w-2/3">
+                <h3 class="text-xl font-medium text-gray-900 mb-3">
+                  <a href="/publications/real2sim" class="hover:text-gray-600 transition-colors">
+                    Real2Sim Image adaptation
+                  </a>
+                </h3>
+                <p class="text-sm text-gray-500 mb-4">2019</p>
+                <p class="text-gray-700 mb-4 leading-relaxed">
+                  Image domain adaptation through the conversion of images with randomized textures (or real images) to a
+                  canonical image representation. Replication of a <a href="https://arxiv.org/abs/1812.07252" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">RCAN paper</a> with different loss modeling (<a href="https://arxiv.org/abs/1603.08155" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">Perceptual/Feature Loss</a> instead of GAN loss).
+                </p>
+                <div class="flex flex-wrap gap-4 text-sm">
+                  <a href="/publications/real2sim" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">full details</a>
+                  <a href="https://github.com/initmaks/ran2can" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">github</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Learning to Swing Project -->
+            <div class="flex flex-col lg:flex-row gap-8 items-center">
+              <div class="lg:w-1/3">
+                <div class="aspect-video bg-gray-100 rounded-lg overflow-hidden">
+                  <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+                    <source src="/assets/videos/learning_to_swing.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="lg:w-2/3">
+                <h3 class="text-xl font-medium text-gray-900 mb-3">
+                  <a href="/publications/learning-to-swing" class="hover:text-gray-600 transition-colors">
+                    Learning to swing
+                  </a>
+                </h3>
+                <p class="text-sm text-gray-500 mb-4">2018</p>
+                <p class="text-gray-700 mb-4 leading-relaxed">
+                  Computer Animation class project, which utilizes off-the-shelf Soft-Actor-Critic Reinforcement Learning method
+                  that learns to build up the momentum and swing the animated character on a pull up bar.
+                </p>
+                <div class="flex flex-wrap gap-4 text-sm">
+                  <a href="/publications/learning-to-swing" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">full details</a>
+                  <a href="/pages/charanim.html" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">short-summary</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Behavioral Cloning Project -->
+            <div class="flex flex-col lg:flex-row gap-8 items-center">
+              <div class="lg:w-1/3">
+                <div class="aspect-video bg-gray-100 rounded-lg overflow-hidden">
+                  <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+                    <source src="/assets/videos/drive.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="lg:w-2/3">
+                <h3 class="text-xl font-medium text-gray-900 mb-3">
+                  <a href="/publications/behavioral-cloning" class="hover:text-gray-600 transition-colors">
+                    Behavioral Cloning for Autonomous Driving
+                  </a>
+                </h3>
+                <p class="text-sm text-gray-500 mb-4">2017</p>
+                <p class="text-gray-700 mb-4 leading-relaxed">
+                  End-to-end (image-to-steering wheel) control policy learning from data collected over multiple laps with
+                  off-the-track recoveries generated by human.
+                </p>
+                <div class="flex flex-wrap gap-4 text-sm">
+                  <a href="/publications/behavioral-cloning" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">full details</a>
+                  <a href="https://github.com/initmaks/Self-driving_car_ND/tree/master/Behavioral-Cloning" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">github</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Back to Home -->
+      <div class="text-center">
+        <a href="/" class="inline-flex items-center text-gray-600 hover:text-gray-900 transition-colors">
+          ← Back to Home
+        </a>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const archiveToggle = document.querySelector('.archive-toggle');
+    const archiveContent = document.querySelector('.archive-content');
+    const archiveArrow = document.querySelector('.archive-arrow');
+    
+    console.log('Archive elements:', { archiveToggle, archiveContent, archiveArrow });
+    
+    if (archiveToggle && archiveContent && archiveArrow) {
+      archiveToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        console.log('Archive toggle clicked');
+        
+        const isHidden = archiveContent.classList.contains('hidden');
+        console.log('Is hidden:', isHidden);
+        
+        if (isHidden) {
+          archiveContent.classList.remove('hidden');
+          archiveArrow.style.transform = 'rotate(90deg)';
+          console.log('Showing archive content');
+        } else {
+          archiveContent.classList.add('hidden');
+          archiveArrow.style.transform = 'rotate(0deg)';
+          console.log('Hiding archive content');
+        }
+      });
+    } else {
+      console.error('Archive elements not found');
+    }
+  });
+</script> 

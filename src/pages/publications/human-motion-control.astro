@@ -1,0 +1,52 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Human Motion Control of Quadrupedal Robots - Maks Sorokin" description="Human Motion Control of Quadrupedal Robots using Deep Reinforcement Learning">
+  <div class="max-w-4xl mx-auto px-8 py-24">
+    <!-- Back Navigation -->
+    <div class="mb-8">
+      <a href="/publications" class="text-gray-600 hover:text-gray-900 transition-colors">← Back to Publications</a>
+    </div>
+
+    <!-- Paper Header -->
+    <div class="mb-12">
+      <h1 class="text-3xl font-light text-gray-900 mb-4">
+        Human Motion Control of Quadrupedal Robots using Deep Reinforcement Learning
+      </h1>
+      <p class="text-lg text-gray-600 mb-4">
+        Sunwoo Kim, <strong>Maks Sorokin</strong>, Jehee Lee, Sehoon Ha
+      </p>
+      <p class="text-gray-500 mb-6">
+        Proceedings of Robotics: Science and Systems (RSS) 2022
+      </p>
+      
+      <!-- Links -->
+      <div class="flex flex-wrap gap-4 text-sm mb-8">
+        <a href="https://sites.google.com/view/humanconquad" class="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-lg transition-colors">Project Page</a>
+        <a href="https://arxiv.org/pdf/2204.13336.pdf" class="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-lg transition-colors">PDF</a>
+        <a href="https://arxiv.org/abs/2204.13336" class="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-lg transition-colors">arXiv</a>
+        <a href="https://www.youtube.com/watch?v=kz8hBG1CKMY" class="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-lg transition-colors">Video</a>
+      </div>
+    </div>
+
+    <!-- Video -->
+    <div class="mb-12">
+      <div class="aspect-video bg-gray-100 rounded-lg overflow-hidden">
+        <video class="w-full h-full object-cover" controls>
+          <source src="/assets/videos/humanconquad.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <!-- Abstract -->
+    <div class="mb-12">
+      <h2 class="text-xl font-medium text-gray-900 mb-4">Abstract</h2>
+      <p class="text-gray-700 leading-relaxed">
+        We propose a novel motion control system that allows a human user to operate various motor tasks seamlessly
+        on a quadrupedal robot. Using our system, a user can execute a variety of motor tasks, including standing, sitting, tilting,
+        manipulating, walking, and turning, on simulated and real quadrupeds.
+      </p>
+    </div>
+  </div>
+</Layout> 

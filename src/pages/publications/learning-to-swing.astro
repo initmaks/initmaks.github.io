@@ -1,0 +1,72 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Learning to Swing - Maks Sorokin" description="Learning to swing using reinforcement learning">
+  <div class="max-w-4xl mx-auto px-8 py-24">
+    <!-- Back Navigation -->
+    <div class="mb-8">
+      <a href="/publications" class="text-gray-600 hover:text-gray-900 transition-colors">← Back to Publications</a>
+    </div>
+
+    <!-- Project Header -->
+    <div class="mb-12">
+      <h1 class="text-3xl font-light text-gray-900 mb-4">
+        Learning to Swing
+      </h1>
+      <p class="text-gray-500 mb-6">
+        2018 - Computer Animation Class Project
+      </p>
+      
+      <!-- Links -->
+      <div class="flex flex-wrap gap-4 text-sm mb-8">
+        <a href="/pages/charanim.html" class="bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-lg transition-colors">Short Summary</a>
+      </div>
+    </div>
+
+    <!-- Video -->
+    <div class="mb-12">
+      <div class="aspect-video bg-gray-100 rounded-lg overflow-hidden">
+        <video class="w-full h-full object-cover" controls>
+          <source src="/assets/videos/learning_to_swing.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <!-- Description -->
+    <div class="mb-12">
+      <h2 class="text-xl font-medium text-gray-900 mb-4">Project Description</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        This Computer Animation class project utilized off-the-shelf Soft-Actor-Critic (SAC) Reinforcement Learning method
+        to teach an animated character to build up momentum and swing on a pull-up bar.
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        The project demonstrates how modern RL algorithms can be applied to character animation tasks, creating
+        realistic and dynamic movement patterns that emerge from the learning process rather than being hand-crafted.
+      </p>
+    </div>
+
+    <!-- Technical Details -->
+    <div class="mb-12">
+      <h2 class="text-xl font-medium text-gray-900 mb-4">Technical Approach</h2>
+      <ul class="text-gray-700 leading-relaxed space-y-2">
+        <li>• Soft Actor-Critic (SAC) reinforcement learning algorithm</li>
+        <li>• Physics-based character simulation</li>
+        <li>• Reward shaping for momentum building and swinging behavior</li>
+        <li>• Real-time character animation from learned policies</li>
+        <li>• Integration with physics simulation environment</li>
+      </ul>
+    </div>
+
+    <!-- Results -->
+    <div class="mb-12">
+      <h2 class="text-xl font-medium text-gray-900 mb-4">Results</h2>
+      <p class="text-gray-700 leading-relaxed">
+        The trained agent successfully learned to generate realistic swinging motions, demonstrating the ability to:
+        build up initial momentum, maintain rhythmic swinging patterns, and adapt to different starting conditions.
+        The resulting animations showed natural-looking character movement that would be difficult to achieve through
+        traditional keyframe animation techniques.
+      </p>
+    </div>
+  </div>
+</Layout> 
