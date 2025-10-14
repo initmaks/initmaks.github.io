@@ -24,9 +24,9 @@ import Layout from '../layouts/Layout.astro';
       <div class="grid grid-cols-1 md:grid-cols-4 gap-16 mb-8 w-full max-w-6xl">
         <!-- Left Column - Photo -->
         <div class="md:col-span-1 flex flex-col items-center justify-center pt-8">
-          <img 
-            src="/assets/img/photo.jpg" 
-            alt="Maks Sorokin" 
+          <img
+            src="/assets/img/photo.png"
+            alt="Maks Sorokin"
             class="w-full max-w-64 rounded-lg"
           />
         </div>
@@ -39,7 +39,7 @@ import Layout from '../layouts/Layout.astro';
           
           <div class="text-lg text-gray-600 mb-8 leading-relaxed">
             <p class="mb-4">
-              I am an Applied Scientist at the <a href="https://rai-inst.com/" class="text-gray-900 hover:text-gray-600 transition-colors">RAI Institute</a>, developing robot learning systems for whole-body manipulation. My work enables robots to have purposeful dynamic interactions with large objects and environments. I focus on fast and steerable policy learning - creating systems that can rapidly acquire new behaviors and generalize well.
+              I am a Research Scientist at the <a href="https://rai-inst.com/" class="text-gray-900 hover:text-gray-600 transition-colors">RAI Institute</a>, developing robot learning systems for whole-body manipulation. My work enables robots to have purposeful dynamic interactions with large objects and environments. I focus on fast and steerable policy learning - creating systems that can rapidly acquire new behaviors and generalize well.
             </p>
             <p class="mb-4">
               Currently finishing my Robotics Ph.D. at Georgia Tech under
@@ -48,7 +48,7 @@ import Layout from '../layouts/Layout.astro';
               <a href="https://ckllab.stanford.edu/" class="text-gray-900 hover:text-gray-600 transition-colors">Dr. C. Karen Liu</a>, where I've built expertise across vision-based learning, navigation, manipulation, and computational design.
             </p>
             <p>
-              My goal is to develop robotic systems capable of learning and executing complex physical tasks with elegance - but at superhuman scale, speed, and precision.
+              My goal is to develop robotic systems capable of learning and executing complex physical tasks with elegance - at scale, and with superhuman speed and precision.
             </p>
           </div>
           
@@ -57,8 +57,7 @@ import Layout from '../layouts/Layout.astro';
             <a href="https://twitter.com/initmaks" class="text-gray-600 hover:text-gray-900 transition-colors">Twitter</a>
             <a href="https://scholar.google.com/citations?user=tFuFXuMAAAAJ" class="text-gray-600 hover:text-gray-900 transition-colors">Google Scholar</a>
             <a href="https://linkedin.com/in/initmaks" class="text-gray-600 hover:text-gray-900 transition-colors">LinkedIn</a>
-            <a href="/assets/pdfs/CV.pdf" class="text-gray-600 hover:text-gray-900 transition-colors">CV</a>
-            <button id="email-btn" class="text-gray-600 hover:text-gray-900 transition-colors" title="Email">Contact</button>
+            <button id="email-btn" class="text-gray-600 hover:text-gray-900 transition-colors" title="Email">Email</button>
           </div>
           
           <div id="email-display" class="text-sm text-gray-500 font-mono mt-2 opacity-0 transition-opacity duration-300"></div>
@@ -76,7 +75,7 @@ import Layout from '../layouts/Layout.astro';
             </div>
             <div class="min-w-0 flex-1">
               <div class="text-sm text-gray-500 mb-1">2024 - Present</div>
-              <div class="font-medium text-gray-900 mb-1">Applied Scientist</div>
+              <div class="font-medium text-gray-900 mb-1">Research Scientist</div>
               <a href="https://rai-inst.com/" target="_blank" rel="noopener noreferrer" class="text-gray-600 leading-snug mb-1 hover:text-gray-800 transition-colors cursor-pointer no-underline">RAI Institute</a>
               <div class="text-[10px] text-gray-500">(prev. known as Boston Dynamics AI Institute)</div>
             </div>
@@ -120,38 +119,39 @@ import Layout from '../layouts/Layout.astro';
       <!-- Latest -->
       <div class="mb-20">
         <h2 class="text-3xl font-light text-gray-900 mb-16">Latest</h2>
-        
-        <!-- Jacta Paper -->
+
+        <!-- Dynamic Whole-Body Manipulation Paper -->
         <div class="max-w-6xl mx-auto">
           <!-- Video Section -->
           <div class="mb-8">
             <div class="aspect-video bg-gray-100 rounded-lg overflow-hidden">
-              <video class="w-full h-full object-cover" autoplay loop muted playsinline>
-                <source src="/assets/videos/jacta_stool_lift.mp4" type="video/mp4">
-              </video>
+              <iframe
+                class="w-full h-full"
+                src="https://www.youtube.com/embed/nM_ZHzp8nQA"
+                title="Combining Sampling and Learning for Dynamic Whole-Body Manipulation"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
             </div>
           </div>
-          
+
           <!-- Text Section -->
           <div class="text-center">
             <h3 class="text-2xl font-medium text-gray-900 mb-4">
-              <a href="https://jacta-manipulation.github.io/" class="hover:text-gray-600 transition-colors">
-                Jacta: A Versatile Planner for Learning Dexterous and Whole-body Manipulation
+              <a href="https://rai-inst.com/resources/blog/combining-sampling-and-learning-for-dynamic-whole-body-manipulation/" class="hover:text-gray-600 transition-colors">
+                Combining Sampling and Learning for Dynamic Whole-Body Manipulation
               </a>
             </h3>
             <p class="text-gray-600 mb-3">
-              Jan Brüdigam, Ali Adeeb Abbas, <strong>Maks Sorokin</strong>, Kuan Fang, Brandon Hung, Maya Guru, Stefan Sosnowski, Jiuguang Wang, Sandra Hirche, Simon Le Cleac'h
-            </p>
-            <p class="text-sm text-gray-500 mb-6">
-              IEEE Robotics and Automation Letters (RA-L) 2024
+              <strong>Maks Sorokin</strong>*, Jan Brüdigam*, Brandon Hung*, Stephen Phillips, Dmitry Yershov, Farzad Niroui, Tong Zhao, <br> Leonor Fermoselle, Xinghao Zhu, Duy Ta, Tao Pang, Jiuguang Wang, Simon Le Cléac'h
             </p>
             <p class="text-gray-700 mb-6 leading-relaxed max-w-6xl mx-auto">
-              We combined reinforcement learning with sampling-based algorithms to solve contact-rich manipulation tasks. While sampling-based planners can quickly find successful trajectories for complex manipulation tasks, the solutions often lack robustness. We leveraged a reinforcement learning algorithm to enhance the robustness of a set of planner demonstrations, distilling them into a single policy that can handle variations and uncertainties in real-world scenarios.
+              We give Spot the ability to manipulate heavy objects (15kg tires) by using its entire body. We combine sampling-based optimization with reinforcement learning to enable forceful, multi-contact manipulation that discovers strategies on the fly. The system handles objects exceeding the robot's nominal payload at near-human speeds.
             </p>
             <div class="flex flex-wrap justify-center gap-4 text-sm">
-              <a href="https://jacta-manipulation.github.io/" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">project page</a>
-              <a href="https://github.com/bdaiinstitute/jacta-manipulation" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">code</a>
-              <a href="https://arxiv.org/pdf/2408.01258.pdf" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">pdf</a>
+              <a href="https://rai-inst.com/resources/blog/combining-sampling-and-learning-for-dynamic-whole-body-manipulation/" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">blog post</a>
+              <a href="https://www.youtube.com/watch?v=nM_ZHzp8nQA" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">video</a>
             </div>
           </div>
         </div>
@@ -160,8 +160,40 @@ import Layout from '../layouts/Layout.astro';
       <!-- Featured -->
       <div class="mb-16">
         <h2 class="text-3xl font-light text-gray-900 mb-16">Featured</h2>
-        
+
         <div class="space-y-16">
+
+        <!-- Jacta Paper -->
+        <div class="flex flex-col lg:flex-row gap-8 items-center">
+          <div class="lg:w-1/3">
+            <div class="aspect-video bg-gray-100 rounded-lg overflow-hidden">
+              <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+                <source src="/assets/videos/jacta_stool_lift.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="lg:w-2/3">
+            <h3 class="text-xl font-medium text-gray-900 mb-3">
+              <a href="https://jacta-manipulation.github.io/" class="hover:text-gray-600 transition-colors">
+                Jacta: A Versatile Planner for Learning Dexterous and Whole-body Manipulation
+              </a>
+            </h3>
+            <p class="text-gray-600 mb-2">
+              Jan Brüdigam, Ali Adeeb Abbas, <strong>Maks Sorokin</strong>, Kuan Fang, Brandon Hung, Maya Guru, Stefan Sosnowski, Jiuguang Wang, Sandra Hirche, Simon Le Cleac'h
+            </p>
+            <p class="text-sm text-gray-500 mb-4">
+              IEEE Robotics and Automation Letters (RA-L) 2024
+            </p>
+            <p class="text-gray-700 mb-4 leading-relaxed">
+              We combined reinforcement learning with sampling-based algorithms to solve contact-rich manipulation tasks. While sampling-based planners can quickly find successful trajectories for complex manipulation tasks, the solutions often lack robustness. We leveraged a reinforcement learning algorithm to enhance the robustness of a set of planner demonstrations, distilling them into a single policy that can handle variations and uncertainties in real-world scenarios.
+            </p>
+            <div class="flex flex-wrap gap-4 text-sm">
+              <a href="https://jacta-manipulation.github.io/" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">project page</a>
+              <a href="https://github.com/bdaiinstitute/jacta-manipulation" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">code</a>
+              <a href="https://arxiv.org/pdf/2408.01258.pdf" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">pdf</a>
+            </div>
+          </div>
+        </div>
 
         <!-- Hardware Design Paper -->
         <div class="flex flex-col lg:flex-row gap-8 items-center">
@@ -250,7 +282,6 @@ import Layout from '../layouts/Layout.astro';
         <a href="https://twitter.com/initmaks" class="text-gray-600 hover:text-gray-900 transition-colors">Twitter</a>
         <a href="https://scholar.google.com/citations?user=tFuFXuMAAAAJ" class="text-gray-600 hover:text-gray-900 transition-colors">Scholar</a>
         <a href="https://linkedin.com/in/initmaks" class="text-gray-600 hover:text-gray-900 transition-colors">LinkedIn</a>
-        <a href="/assets/pdfs/CV.pdf" class="text-gray-600 hover:text-gray-900 transition-colors">CV</a>
         <button id="email-btn-footer" class="text-gray-600 hover:text-gray-900 transition-colors" title="Email">Email</button>
       </div>
       
