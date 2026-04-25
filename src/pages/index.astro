@@ -21,7 +21,7 @@ import Layout from '../layouts/Layout.astro';
   <section id="about" class="min-h-screen flex items-center pt-20">
     <div class="max-w-7xl mx-auto px-8 py-24 flex flex-col items-center">
       <!-- Profile Section -->
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-16 mb-8 w-full max-w-6xl">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20 w-full max-w-6xl">
         <!-- Left Column - Photo -->
         <div class="md:col-span-1 flex flex-col items-center justify-center pt-8">
           <img
@@ -39,16 +39,21 @@ import Layout from '../layouts/Layout.astro';
           
           <div class="text-lg text-gray-600 mb-8 leading-relaxed">
             <p class="mb-4">
-              I am a Research Scientist at the <a href="https://rai-inst.com/" class="text-gray-900 hover:text-gray-600 transition-colors">RAI Institute</a>, developing robot learning systems for whole-body manipulation. My work enables robots to have purposeful dynamic interactions with large objects and environments. I focus on fast and steerable policy learning - creating systems that can rapidly acquire new behaviors and generalize well.
+              I build robot learning systems that work outside the lab, favoring minimal solutions that are easy to understand and rapid iteration over upfront sophistication. Current focus is on dynamic whole-body manipulation, with earlier work in computational robot design and outdoor navigation.
             </p>
             <p class="mb-4">
-              Currently finishing my Robotics Ph.D. at Georgia Tech under
-              <a href="https://www.cc.gatech.edu/~sha9/" class="text-gray-900 hover:text-gray-600 transition-colors">Dr. Sehoon Ha</a>
+              I received my Robotics Ph.D. at Georgia Tech, advised by
+              <a href="https://www.cc.gatech.edu/~sha9/" class="text-gray-900 hover:text-gray-600 transition-colors">Sehoon Ha</a>,
+              in close collaboration with
+              <a href="https://ckllab.stanford.edu/" class="text-gray-900 hover:text-gray-600 transition-colors">C. Karen Liu</a>
               and
-              <a href="https://ckllab.stanford.edu/" class="text-gray-900 hover:text-gray-600 transition-colors">Dr. C. Karen Liu</a>, where I've built expertise across vision-based learning, navigation, manipulation, and computational design.
+              <a href="https://www.linkedin.com/in/jie-tan/" class="text-gray-900 hover:text-gray-600 transition-colors">Jie Tan</a>. Earlier, at Google X, I worked closely with
+              <a href="https://www.yunfei-bai.com/" class="text-gray-900 hover:text-gray-600 transition-colors">Yunfei Bai</a>
+              and
+              <a href="https://www.linkedin.com/in/khansari/" class="text-gray-900 hover:text-gray-600 transition-colors">Mohi Khansari</a>.
             </p>
             <p>
-              My goal is to develop robotic systems capable of learning and executing complex physical tasks with elegance - at scale, and with superhuman speed and precision.
+              My goal is to build robot learning systems capable of learning and executing complex physical tasks with elegance, at scale, and with superhuman speed and precision, while remaining safe, reliable, and easily steerable.
             </p>
           </div>
           
@@ -57,10 +62,8 @@ import Layout from '../layouts/Layout.astro';
             <a href="https://twitter.com/initmaks" class="text-gray-600 hover:text-gray-900 transition-colors">Twitter</a>
             <a href="https://scholar.google.com/citations?user=tFuFXuMAAAAJ" class="text-gray-600 hover:text-gray-900 transition-colors">Google Scholar</a>
             <a href="https://linkedin.com/in/initmaks" class="text-gray-600 hover:text-gray-900 transition-colors">LinkedIn</a>
-            <button id="email-btn" class="text-gray-600 hover:text-gray-900 transition-colors" title="Email">Email</button>
+            <a href="#contact" class="scroll-link text-gray-600 hover:text-gray-900 transition-colors">Contact</a>
           </div>
-          
-          <div id="email-display" class="text-sm text-gray-500 font-mono mt-2 opacity-0 transition-opacity duration-300"></div>
         </div>
       </div>
 
@@ -101,7 +104,7 @@ import Layout from '../layouts/Layout.astro';
               </a>
             </div>
             <div class="min-w-0 flex-1">
-              <div class="text-sm text-gray-500 mb-1">2020 - Present</div>
+              <div class="text-sm text-gray-500 mb-1">2020 - 2026</div>
               <div class="font-medium text-gray-900 mb-1">PhD in Robotics</div>
               <a href="https://www.gatech.edu/" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-800 transition-colors cursor-pointer no-underline">Georgia Tech</a>
             </div>
@@ -113,195 +116,578 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
+  <!-- Highlight -->
+  <section id="highlight" class="py-16">
+    <div class="max-w-6xl mx-auto px-8">
+      <div class="text-center mb-6">
+        <span class="text-xs font-medium tracking-[0.2em] uppercase text-gray-400">Recent highlight</span>
+      </div>
+      <div class="aspect-video bg-gray-100 rounded-lg overflow-hidden mb-8">
+        <iframe
+          class="w-full h-full"
+          src="https://www.youtube.com/embed/nM_ZHzp8nQA"
+          title="Combining Sampling and Learning for Dynamic Whole-Body Manipulation"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div class="text-center">
+        <h3 class="text-2xl font-medium text-gray-900 mb-4">
+          <a href="https://rai-inst.com/resources/blog/combining-sampling-and-learning-for-dynamic-whole-body-manipulation/" class="hover:text-gray-600 transition-colors">
+            Combining Sampling and Learning for Dynamic Whole-Body Manipulation
+          </a>
+        </h3>
+        <p class="text-gray-600 mb-3">
+          <strong>Maks Sorokin</strong>*, Jan Brüdigam*, Brandon Hung*, Stephen Phillips, Dmitry Yershov, Farzad Niroui, Tong Zhao, <br> Leonor Fermoselle, Xinghao Zhu, Duy Ta, Tao Pang, Jiuguang Wang, Simon Le Cléac'h
+        </p>
+        <p class="text-sm text-gray-500 mb-4">
+          RAI Institute blog post, 2025
+        </p>
+        <p class="text-gray-700 mb-6 leading-relaxed">
+          We give Spot the ability to manipulate heavy objects (15kg tires) using its entire body. By combining sampling-based optimization with reinforcement learning, the system enables forceful, multi-contact manipulation that discovers strategies on the fly — handling objects that exceed the robot's nominal payload, at near-human speeds.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4 text-sm">
+          <a href="https://rai-inst.com/resources/blog/combining-sampling-and-learning-for-dynamic-whole-body-manipulation/" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">blog post</a>
+          <a href="https://www.youtube.com/watch?v=nM_ZHzp8nQA" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">video</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Publications Section -->
   <section id="publications" class="py-20">
     <div class="max-w-7xl mx-auto px-8">
-      <!-- Latest -->
-      <div class="mb-20">
-        <h2 class="text-3xl font-light text-gray-900 mb-16">Latest</h2>
 
-        <!-- Dynamic Whole-Body Manipulation Paper -->
-        <div class="max-w-6xl mx-auto">
-          <!-- Video Section -->
-          <div class="mb-8">
-            <div class="aspect-video bg-gray-100 rounded-lg overflow-hidden">
-              <iframe
-                class="w-full h-full"
-                src="https://www.youtube.com/embed/nM_ZHzp8nQA"
-                title="Combining Sampling and Learning for Dynamic Whole-Body Manipulation"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
+      <!-- 2026 -->
+      <div class="year-group mb-24 pb-12 border-b border-gray-200 flex flex-col lg:flex-row lg:gap-8">
+        <div class="year-column lg:w-20 lg:flex-shrink-0 mb-6 lg:mb-0">
+          <div class="lg:sticky lg:top-20 lg:mt-14">
+            <span class="text-3xl font-extralight tracking-wider text-gray-400">2026</span>
+          </div>
+        </div>
+        <div class="flex-1 space-y-16">
+
+          <!-- SUMO -->
+          <div class="flex flex-col lg:flex-row gap-8 items-center">
+            <div class="lg:w-1/3">
+              <div class="aspect-video bg-gray-100 rounded-lg overflow-hidden">
+                <img src="/assets/videos/sumo_preview.gif" alt="SUMO preview" class="w-full h-full object-cover" />
+              </div>
+            </div>
+            <div class="lg:w-2/3">
+              <h3 class="text-xl font-medium text-gray-900 mb-3">
+                <a href="https://sumo.rai-inst.com/" class="hover:text-gray-600 transition-colors">
+                  SUMO: Dynamic and Generalizable Whole-Body Loco-Manipulation
+                </a>
+              </h3>
+              <p class="text-gray-600 mb-2">
+                John Z. Zhang, <strong>Maks Sorokin</strong>*, Jan Brüdigam*, Brandon Hung*, Stephen Phillips, Dmitry Yershov, Farzad Niroui, Tong Zhao, Leonor Fermoselle, Xinghao Zhu, Chao Cao, Duy Ta, Tao Pang, Jiuguang Wang, Preston Culbertson, Zachary Manchester, Simon Le Cléac'h
+              </p>
+              <p class="text-sm text-gray-500 mb-4">
+                Under review, 2026
+              </p>
+              <p class="text-gray-700 mb-4 leading-relaxed">
+                A sim-to-real approach that enables legged robots to dynamically manipulate large and heavy objects with whole-body dexterity. We combine pre-trained whole-body policies with sample-based planning in a hierarchical controller that generalizes to diverse objects and tasks without retraining — demonstrated on Spot uprighting a 15kg tire and dragging barriers larger than itself, as well as humanoid simulations.
+              </p>
+              <div class="flex flex-wrap gap-4 text-sm">
+                <a href="https://sumo.rai-inst.com/" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">project page</a>
+                <a href="https://youtu.be/3DKkiA_ZOfQ" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">video</a>
+                <a href="https://github.com/rai-opensource/sumo" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">code</a>
+                <a href="https://arxiv.org/abs/2604.08508" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">arxiv</a>
+              </div>
             </div>
           </div>
 
-          <!-- Text Section -->
-          <div class="text-center">
-            <h3 class="text-2xl font-medium text-gray-900 mb-4">
-              <a href="https://rai-inst.com/resources/blog/combining-sampling-and-learning-for-dynamic-whole-body-manipulation/" class="hover:text-gray-600 transition-colors no-underline">
-                Combining Sampling and Learning for Dynamic Whole-Body Manipulation
-              </a>
-            </h3>
-            <p class="text-gray-600 mb-3">
-              <strong>Maks Sorokin</strong>*, Jan Brüdigam*, Brandon Hung*, Stephen Phillips, Dmitry Yershov, Farzad Niroui, Tong Zhao, <br> Leonor Fermoselle, Xinghao Zhu, Duy Ta, Tao Pang, Jiuguang Wang, Simon Le Cléac'h
-            </p>
-            <p class="text-gray-700 mb-6 leading-relaxed max-w-6xl mx-auto">
-              We give Spot the ability to manipulate heavy objects (15kg tires) by using its entire body. We combine sampling-based optimization with reinforcement learning to enable forceful, multi-contact manipulation that discovers strategies on the fly. The system handles objects exceeding the robot's nominal payload at near-human speeds.
-            </p>
-            <div class="flex flex-wrap justify-center gap-4 text-sm">
-              <a href="https://rai-inst.com/resources/blog/combining-sampling-and-learning-for-dynamic-whole-body-manipulation/" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">blog post</a>
-              <a href="https://www.youtube.com/watch?v=nM_ZHzp8nQA" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">video</a>
+          <!-- AdaptManip -->
+          <div class="flex flex-col lg:flex-row gap-8 items-center">
+            <div class="lg:w-1/3">
+              <div class="aspect-video bg-gray-100 rounded-lg overflow-hidden">
+                <img src="/assets/videos/adaptmanip.gif" alt="AdaptManip preview" class="w-full h-full object-cover" />
+              </div>
+            </div>
+            <div class="lg:w-2/3">
+              <h3 class="text-xl font-medium text-gray-900 mb-3">
+                <a href="https://morganbyrd03.github.io/adaptmanip/" class="hover:text-gray-600 transition-colors">
+                  AdaptManip: Learning Adaptive Whole-Body Object Lifting and Delivery with Online Recurrent State Estimation
+                </a>
+              </h3>
+              <p class="text-gray-600 mb-2">
+                Morgan Byrd, Donghoon Baek, Kartik Garg, Hyunyoung Jung, Daesol Cho, <strong>Maks Sorokin</strong>, Robert Wright, Sehoon Ha
+              </p>
+              <p class="text-sm text-gray-500 mb-4">
+                Under review (RA-L), 2026
+              </p>
+              <p class="text-gray-700 mb-4 leading-relaxed">
+                An autonomous framework that enables humanoid robots to navigate, grasp, lift, and deliver objects with whole-body coordination. A recurrent pose estimator maintains robust state under noisy vision, and the policy generalizes across varying object shapes and masses with adaptive regrasping.
+              </p>
+              <div class="flex flex-wrap gap-4 text-sm">
+                <a href="https://morganbyrd03.github.io/adaptmanip/" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">project page</a>
+                <a href="https://arxiv.org/abs/2602.14363" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">arxiv</a>
+                <a href="https://arxiv.org/pdf/2602.14363" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">pdf</a>
+              </div>
             </div>
           </div>
+
         </div>
       </div>
 
-      <!-- Featured -->
+      <!-- 2024 -->
+      <div class="year-group mb-24 pb-12 border-b border-gray-200 flex flex-col lg:flex-row lg:gap-8">
+        <div class="year-column lg:w-20 lg:flex-shrink-0 mb-6 lg:mb-0">
+          <div class="lg:sticky lg:top-20 lg:mt-14">
+            <span class="text-3xl font-extralight tracking-wider text-gray-400">2024</span>
+          </div>
+        </div>
+        <div class="flex-1 space-y-16">
+
+          <!-- Jacta -->
+          <div class="flex flex-col lg:flex-row gap-8 items-center">
+            <div class="lg:w-1/3">
+              <div class="aspect-video bg-gray-100 rounded-lg overflow-hidden">
+                <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+                  <source src="/assets/videos/jacta_stool_lift.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="lg:w-2/3">
+              <h3 class="text-xl font-medium text-gray-900 mb-3">
+                <a href="https://jacta-manipulation.github.io/" class="hover:text-gray-600 transition-colors">
+                  Jacta: A Versatile Planner for Learning Dexterous and Whole-body Manipulation
+                </a>
+              </h3>
+              <p class="text-gray-600 mb-2">
+                Jan Brüdigam, Ali Adeeb Abbas, <strong>Maks Sorokin</strong>, Kuan Fang, Brandon Hung, Maya Guru, Stefan Sosnowski, Jiuguang Wang, Sandra Hirche, Simon Le Cleac'h
+              </p>
+              <p class="text-sm text-gray-500 mb-4">
+                IEEE Robotics and Automation Letters (RA-L) 2024
+              </p>
+              <p class="text-gray-700 mb-4 leading-relaxed">
+                We combine reinforcement learning with sampling-based planning to solve contact-rich manipulation tasks. Sampling-based planners quickly find successful trajectories, but the resulting solutions often lack robustness. We use RL to distill a set of planner demonstrations into a single policy that handles real-world variation and uncertainty.
+              </p>
+              <div class="flex flex-wrap gap-4 text-sm">
+                <a href="https://jacta-manipulation.github.io/" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">project page</a>
+                <a href="https://github.com/bdaiinstitute/jacta-manipulation" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">code</a>
+                <a href="https://arxiv.org/pdf/2408.01258.pdf" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">pdf</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 2023 -->
+      <div class="year-group mb-24 pb-12 border-b border-gray-200 flex flex-col lg:flex-row lg:gap-8">
+        <div class="year-column lg:w-20 lg:flex-shrink-0 mb-6 lg:mb-0">
+          <div class="lg:sticky lg:top-20 lg:mt-14">
+            <span class="text-3xl font-extralight tracking-wider text-gray-400">2023</span>
+          </div>
+        </div>
+        <div class="flex-1 space-y-16">
+
+          <!-- Hardware Design / Learning Robot -->
+          <div class="flex flex-col lg:flex-row gap-8 items-center">
+            <div class="lg:w-1/3">
+              <div class="aspect-video bg-gray-100 rounded-lg overflow-hidden">
+                <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+                  <source src="/assets/videos/learning_robot_morph.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="lg:w-2/3">
+              <h3 class="text-xl font-medium text-gray-900 mb-3">
+                <a href="https://learning-robot.github.io/" class="hover:text-gray-600 transition-colors">
+                  On Designing a Learning Robot: Improving Morphology for Enhanced Task Performance and Learning
+                </a>
+              </h3>
+              <p class="text-gray-600 mb-2">
+                <strong>Maks Sorokin</strong>, Chuyuan Fu, Jie Tan, C. Karen Liu, Yunfei Bai, Wenlong Lu, Sehoon Ha, Mohi Khansari
+              </p>
+              <p class="text-sm text-gray-500 mb-4">
+                International Conference on Intelligent Robots and Systems (IROS) 2023
+              </p>
+              <p class="text-gray-700 mb-4 leading-relaxed">
+                A learning-oriented morphology optimization framework that jointly accounts for a robot's body, its onboard perception, and how the two interact across tasks. Holistically optimized morphologies improve task performance by 15–20% across a range of manipulation problems, and require 25× less data to match a human-expert-designed morphology.
+              </p>
+              <div class="flex flex-wrap gap-4 text-sm">
+                <a href="https://learning-robot.github.io/" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">project page</a>
+                <a href="https://www.youtube.com/watch?v=w9B0COjGvfo" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">video</a>
+                <a href="https://arxiv.org/pdf/2303.13390.pdf" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">pdf</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- BAMS -->
+          <div class="flex flex-col lg:flex-row gap-8 items-center">
+            <div class="lg:w-1/3">
+              <div class="aspect-video bg-gray-100 rounded-lg overflow-hidden">
+                <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+                  <source src="/assets/videos/behavior_representations.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="lg:w-2/3">
+              <h3 class="text-xl font-medium text-gray-900 mb-3">
+                <a href="https://multiscale-behavior.github.io/" class="hover:text-gray-600 transition-colors">
+                  Relax, it doesn't matter how you get there!
+                </a>
+              </h3>
+              <p class="text-gray-600 mb-2">
+                Mehdi Azabou, Michael Mendelson, <strong>Maks Sorokin</strong>, Shantanu Thakoor, Nauman Ahad, Carolina Urzay, Eva L Dyer
+              </p>
+              <p class="text-sm text-gray-500 mb-4">
+                Neural Information Processing Systems (NeurIPS) 2023 — Spotlight
+              </p>
+              <p class="text-gray-700 mb-4 leading-relaxed">
+                We introduce Bootstrap Across Multiple Scales (BAMS), a multi-scale self-supervised representation-learning model for behavior analysis. BAMS pools features from encoders with different temporal receptive fields and applies latent bootstrapping objectives in each scale's embedding space, encouraging disentanglement across timescales.
+              </p>
+              <div class="flex flex-wrap gap-4 text-sm">
+                <a href="https://multiscale-behavior.github.io/" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">project page</a>
+                <a href="https://arxiv.org/pdf/2303.08811.pdf" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">pdf</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 2022 -->
+      <div class="year-group mb-24 pb-12 border-b border-gray-200 flex flex-col lg:flex-row lg:gap-8">
+        <div class="year-column lg:w-20 lg:flex-shrink-0 mb-6 lg:mb-0">
+          <div class="lg:sticky lg:top-20 lg:mt-14">
+            <span class="text-3xl font-extralight tracking-wider text-gray-400">2022</span>
+          </div>
+        </div>
+        <div class="flex-1 space-y-16">
+
+          <!-- Sidewalk Navigation -->
+          <div class="flex flex-col lg:flex-row gap-8 items-center">
+            <div class="lg:w-1/3">
+              <div class="aspect-video bg-gray-100 rounded-lg overflow-hidden">
+                <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+                  <source src="/assets/videos/urban_navigation.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="lg:w-2/3">
+              <h3 class="text-xl font-medium text-gray-900 mb-3">
+                <a href="/publications/sidewalk-navigation" class="hover:text-gray-600 transition-colors">
+                  Learning to Navigate Sidewalks in Outdoor Environments
+                </a>
+              </h3>
+              <p class="text-gray-600 mb-2">
+                <strong>Maks Sorokin</strong>, Jie Tan, C. Karen Liu, Sehoon Ha
+              </p>
+              <p class="text-sm text-gray-500 mb-4">
+                IEEE Robotics and Automation Letters (RA-L) 2022
+              </p>
+              <p class="text-gray-700 mb-4 leading-relaxed">
+                A system that enables zero-shot transfer of vision-based policies to outdoor sidewalk navigation. Evaluated on a quadrupedal robot walking 3.2 km of real-world sidewalks with minimal human intervention.
+              </p>
+              <div class="flex flex-wrap gap-4 text-sm">
+                <a href="/publications/sidewalk-navigation" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">project page</a>
+                <a href="https://www.youtube.com/watch?v=JsAZy3YETwQ" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">video</a>
+                <a href="https://arxiv.org/pdf/2109.05603.pdf" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">pdf</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Human Motion Control -->
+          <div class="flex flex-col lg:flex-row gap-8 items-center">
+            <div class="lg:w-1/3">
+              <div class="aspect-video bg-gray-100 rounded-lg overflow-hidden">
+                <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+                  <source src="/assets/videos/humanconquad.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="lg:w-2/3">
+              <h3 class="text-xl font-medium text-gray-900 mb-3">
+                <a href="https://sites.google.com/view/humanconquad" class="hover:text-gray-600 transition-colors">
+                  Human Motion Control of Quadrupedal Robots using Deep Reinforcement Learning
+                </a>
+              </h3>
+              <p class="text-gray-600 mb-2">
+                Sunwoo Kim, <strong>Maks Sorokin</strong>, Jehee Lee, Sehoon Ha
+              </p>
+              <p class="text-sm text-gray-500 mb-4">
+                Proceedings of Robotics: Science and Systems (RSS) 2022
+              </p>
+              <p class="text-gray-700 mb-4 leading-relaxed">
+                A motion-control system that lets a human user drive a quadrupedal robot through a wide range of motor tasks — standing, sitting, tilting, manipulating, walking, and turning — in both simulation and on hardware.
+              </p>
+              <div class="flex flex-wrap gap-4 text-sm">
+                <a href="https://sites.google.com/view/humanconquad" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">project page</a>
+                <a href="https://arxiv.org/pdf/2204.13336.pdf" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">pdf</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 2021 -->
+      <div class="year-group mb-24 pb-12 border-b border-gray-200 flex flex-col lg:flex-row lg:gap-8">
+        <div class="year-column lg:w-20 lg:flex-shrink-0 mb-6 lg:mb-0">
+          <div class="lg:sticky lg:top-20 lg:mt-14">
+            <span class="text-3xl font-extralight tracking-wider text-gray-400">2021</span>
+          </div>
+        </div>
+        <div class="flex-1 space-y-16">
+
+          <!-- Human Search Behavior -->
+          <div class="flex flex-col lg:flex-row gap-8 items-center">
+            <div class="lg:w-1/3">
+              <div class="aspect-video bg-gray-100 rounded-lg overflow-hidden">
+                <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+                  <source src="/assets/videos/object_search_animation.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="lg:w-2/3">
+              <h3 class="text-xl font-medium text-gray-900 mb-3">
+                <a href="/publications/human-search-behavior" class="hover:text-gray-600 transition-colors">
+                  Learning Human Search Behavior from Egocentric View
+                </a>
+              </h3>
+              <p class="text-gray-600 mb-2">
+                <strong>Maks Sorokin</strong>, Wenhao Yu, Sehoon Ha, C. Karen Liu
+              </p>
+              <p class="text-sm text-gray-500 mb-4">
+                EUROGRAPHICS 2021
+              </p>
+              <p class="text-gray-700 mb-4 leading-relaxed">
+                We train a vision-based agent to perform object search in a photorealistic 3D scene, and propose a motion-synthesis mechanism that retargets the agent's head motion onto an animated human character (PFNN/NSM) — transferring its search behavior to a humanoid avatar.
+              </p>
+              <div class="flex flex-wrap gap-4 text-sm">
+                <a href="/publications/human-search-behavior" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">project page</a>
+                <a href="https://arxiv.org/pdf/2011.03618.pdf" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">pdf</a>
+                <a href="https://www.youtube.com/watch?v=LvSHpmjt8pU" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">video</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Meta-Learning -->
+          <div class="flex flex-col lg:flex-row gap-8 items-center">
+            <div class="lg:w-1/3">
+              <div class="aspect-video bg-gray-100 rounded-lg overflow-hidden">
+                <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+                  <source src="/assets/videos/sensor_height_adaptation.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="lg:w-2/3">
+              <h3 class="text-xl font-medium text-gray-900 mb-3">
+                <a href="/publications/meta-learning" class="hover:text-gray-600 transition-colors">
+                  A Few Shot Adaptation of Visual Navigation Skills to New Observations using Meta-Learning
+                </a>
+              </h3>
+              <p class="text-gray-600 mb-2">
+                Qian Luo, <strong>Maks Sorokin</strong>, Sehoon Ha
+              </p>
+              <p class="text-sm text-gray-500 mb-4">
+                The IEEE International Conference on Robotics and Automation (ICRA) 2021
+              </p>
+              <p class="text-gray-700 mb-4 leading-relaxed">
+                Vision-based navigation agents can be trained to adapt to new sensor configurations with as few as three shots of experience. Rapid adaptation comes from a bottleneck between the perception and control networks, plus meta-adaptation of the perception component.
+              </p>
+              <div class="flex flex-wrap gap-4 text-sm">
+                <a href="/publications/meta-learning" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">project page</a>
+                <a href="https://arxiv.org/pdf/2011.03609.pdf" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">pdf</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Archive -->
       <div class="mb-16">
-        <h2 class="text-3xl font-light text-gray-900 mb-16">Featured</h2>
+        <div class="archive-section">
+          <div class="text-center">
+            <button class="archive-toggle group inline-flex items-center gap-3 px-6 py-3 rounded-full border border-gray-200 hover:border-gray-400 bg-white hover:bg-gray-50 text-gray-600 hover:text-gray-900 transition-all duration-200 shadow-sm hover:shadow">
+              <span class="text-xs font-medium tracking-[0.2em] uppercase">Earlier projects · 2017–2019</span>
+              <svg class="archive-arrow w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+          </div>
 
-        <div class="space-y-16">
+          <div class="archive-content hidden mt-12">
 
-        <!-- Jacta Paper -->
-        <div class="flex flex-col lg:flex-row gap-8 items-center">
-          <div class="lg:w-1/3">
-            <div class="aspect-video bg-gray-100 rounded-lg overflow-hidden">
-              <video class="w-full h-full object-cover" autoplay loop muted playsinline>
-                <source src="/assets/videos/jacta_stool_lift.mp4" type="video/mp4">
-              </video>
+            <!-- 2019 -->
+            <div class="year-group mb-24 pb-12 border-b border-gray-200 flex flex-col lg:flex-row lg:gap-8">
+              <div class="year-column lg:w-20 lg:flex-shrink-0 mb-6 lg:mb-0">
+                <div class="lg:sticky lg:top-20 lg:mt-12">
+                  <span class="text-3xl font-extralight tracking-wider text-gray-400">2019</span>
+                </div>
+              </div>
+              <div class="flex-1 space-y-16">
+                <!-- Real2Sim -->
+                <div class="flex flex-col lg:flex-row gap-8 items-center">
+                  <div class="lg:w-1/3">
+                    <div class="aspect-video bg-gray-100 rounded-lg overflow-hidden flex items-center justify-center">
+                      <img src="/assets/img/sim2sim.png" alt="Real2Sim" class="max-w-full max-h-full object-contain">
+                    </div>
+                  </div>
+                  <div class="lg:w-2/3">
+                    <h3 class="text-xl font-medium text-gray-900 mb-3">
+                      <a href="/publications/real2sim" class="hover:text-gray-600 transition-colors">
+                        Real2Sim Image Adaptation
+                      </a>
+                    </h3>
+                    <p class="text-gray-700 mb-4 leading-relaxed">
+                      Image domain adaptation that maps randomized-texture (or real) images into a single canonical representation. A re-implementation of the <a href="https://arxiv.org/abs/1812.07252" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">RCAN paper</a>, swapping the original GAN loss for a <a href="https://arxiv.org/abs/1603.08155" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">perceptual/feature loss</a>.
+                    </p>
+                    <div class="flex flex-wrap gap-4 text-sm">
+                      <a href="https://github.com/initmaks/ran2can" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">github</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="lg:w-2/3">
-            <h3 class="text-xl font-medium text-gray-900 mb-3">
-              <a href="https://jacta-manipulation.github.io/" class="hover:text-gray-600 transition-colors">
-                Jacta: A Versatile Planner for Learning Dexterous and Whole-body Manipulation
-              </a>
-            </h3>
-            <p class="text-gray-600 mb-2">
-              Jan Brüdigam, Ali Adeeb Abbas, <strong>Maks Sorokin</strong>, Kuan Fang, Brandon Hung, Maya Guru, Stefan Sosnowski, Jiuguang Wang, Sandra Hirche, Simon Le Cleac'h
-            </p>
-            <p class="text-sm text-gray-500 mb-4">
-              IEEE Robotics and Automation Letters (RA-L) 2024
-            </p>
-            <p class="text-gray-700 mb-4 leading-relaxed">
-              We combined reinforcement learning with sampling-based algorithms to solve contact-rich manipulation tasks. While sampling-based planners can quickly find successful trajectories for complex manipulation tasks, the solutions often lack robustness. We leveraged a reinforcement learning algorithm to enhance the robustness of a set of planner demonstrations, distilling them into a single policy that can handle variations and uncertainties in real-world scenarios.
-            </p>
-            <div class="flex flex-wrap gap-4 text-sm">
-              <a href="https://jacta-manipulation.github.io/" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">project page</a>
-              <a href="https://github.com/bdaiinstitute/jacta-manipulation" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">code</a>
-              <a href="https://arxiv.org/pdf/2408.01258.pdf" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">pdf</a>
-            </div>
-          </div>
-        </div>
 
-        <!-- Hardware Design Paper -->
-        <div class="flex flex-col lg:flex-row gap-8 items-center">
-          <div class="lg:w-1/3">
-            <div class="aspect-video bg-gray-100 rounded-lg overflow-hidden">
-              <video class="w-full h-full object-cover" autoplay loop muted playsinline>
-                <source src="/assets/videos/learning_robot_morph.mp4" type="video/mp4">
-              </video>
+            <!-- 2018 -->
+            <div class="year-group mb-24 pb-12 border-b border-gray-200 flex flex-col lg:flex-row lg:gap-8">
+              <div class="year-column lg:w-20 lg:flex-shrink-0 mb-6 lg:mb-0">
+                <div class="lg:sticky lg:top-20 lg:mt-12">
+                  <span class="text-3xl font-extralight tracking-wider text-gray-400">2018</span>
+                </div>
+              </div>
+              <div class="flex-1 space-y-16">
+                <!-- Learning to Swing -->
+                <div class="flex flex-col lg:flex-row gap-8 items-center">
+                  <div class="lg:w-1/3">
+                    <div class="aspect-video bg-gray-100 rounded-lg overflow-hidden">
+                      <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+                        <source src="/assets/videos/learning_to_swing.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                  </div>
+                  <div class="lg:w-2/3">
+                    <h3 class="text-xl font-medium text-gray-900 mb-3">
+                      <a href="/publications/learning-to-swing" class="hover:text-gray-600 transition-colors">
+                        Learning to Swing
+                      </a>
+                    </h3>
+                    <p class="text-gray-700 mb-4 leading-relaxed">
+                      A Computer Animation course project: an off-the-shelf Soft Actor-Critic agent learns to build momentum and swing an animated character on a pull-up bar.
+                    </p>
+                    <div class="flex flex-wrap gap-4 text-sm">
+                      <a href="/publications/learning-to-swing" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">project page</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="lg:w-2/3">
-            <h3 class="text-xl font-medium text-gray-900 mb-3">
-              <a href="https://learning-robot.github.io/" class="hover:text-gray-600 transition-colors">
-                On Designing a Learning Robot: Improving Morphology for Enhanced Task Performance and Learning
-              </a>
-            </h3>
-            <p class="text-gray-600 mb-2">
-              <strong>Maks Sorokin</strong>, Chuyuan Fu, Jie Tan, C. Karen Liu, Yunfei Bai, Wenlong Lu, Sehoon Ha, Mohi Khansari
-            </p>
-            <p class="text-sm text-gray-500 mb-4">
-              International Conference on Intelligent Robots and Systems (IROS) 2023
-            </p>
-            <p class="text-gray-700 mb-4 leading-relaxed">
-              We present a learning-oriented morphology optimization framework that accounts for the interplay between the
-              robot's morphology, onboard perception abilities, and their interaction in different tasks.
-              We find that morphologies optimized holistically improve the robot performance by 15-20% on
-              various manipulation tasks, and require 25x less data to match human-expert made morphology performance.
-            </p>
-            <div class="flex flex-wrap gap-4 text-sm">
-              <a href="https://learning-robot.github.io/" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">project page</a>
-              <a href="https://www.youtube.com/watch?v=w9B0COjGvfo" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">video</a>
-              <a href="https://arxiv.org/pdf/2303.13390.pdf" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">pdf</a>
-            </div>
-          </div>
-        </div>
 
-        <!-- Navigation Paper -->
-        <div class="flex flex-col lg:flex-row gap-8 items-center">
-          <div class="lg:w-1/3">
-            <div class="aspect-video bg-gray-100 rounded-lg overflow-hidden">
-              <video class="w-full h-full object-cover" autoplay loop muted playsinline>
-                <source src="/assets/videos/urban_navigation.mp4" type="video/mp4">
-              </video>
+            <!-- 2017 -->
+            <div class="year-group mb-24 pb-12 border-b border-gray-200 flex flex-col lg:flex-row lg:gap-8">
+              <div class="year-column lg:w-20 lg:flex-shrink-0 mb-6 lg:mb-0">
+                <div class="lg:sticky lg:top-20 lg:mt-12">
+                  <span class="text-3xl font-extralight tracking-wider text-gray-400">2017</span>
+                </div>
+              </div>
+              <div class="flex-1 space-y-16">
+                <!-- Behavioral Cloning -->
+                <div class="flex flex-col lg:flex-row gap-8 items-center">
+                  <div class="lg:w-1/3">
+                    <div class="aspect-video bg-gray-100 rounded-lg overflow-hidden">
+                      <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+                        <source src="/assets/videos/drive.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                  </div>
+                  <div class="lg:w-2/3">
+                    <h3 class="text-xl font-medium text-gray-900 mb-3">
+                      <a href="/publications/behavioral-cloning" class="hover:text-gray-600 transition-colors">
+                        Behavioral Cloning for Autonomous Driving
+                      </a>
+                    </h3>
+                    <p class="text-gray-700 mb-4 leading-relaxed">
+                      An end-to-end image-to-steering control policy, trained via behavioral cloning on data from multiple laps and deliberate off-track recoveries recorded by a human driver.
+                    </p>
+                    <div class="flex flex-wrap gap-4 text-sm">
+                      <a href="https://github.com/initmaks/Self-driving_car_ND/tree/master/Behavioral-Cloning" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">github</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="lg:w-2/3">
-            <h3 class="text-xl font-medium text-gray-900 mb-3">
-              <a href="/publications/sidewalk-navigation" class="hover:text-gray-600 transition-colors">
-                Learning to Navigate Sidewalks in Outdoor Environments
-              </a>
-            </h3>
-            <p class="text-gray-600 mb-2">
-              <strong>Maks Sorokin</strong>, Jie Tan, C. Karen Liu, Sehoon Ha
-            </p>
-            <p class="text-sm text-gray-500 mb-4">
-              IEEE Robotics and Automation Letters (RA-L) 2022
-            </p>
-            <p class="text-gray-700 mb-4 leading-relaxed">
-              We design a system which enables zero-shot vision-based policy transfer to the real-world outdoor environments
-              for sidewalk navigation task. Our approach is evaluated on a quadrupedal robot navigating sidewalks in the real world walking 3.2 kilometers
-              with a limited number of human interventions.
-            </p>
-            <div class="flex flex-wrap gap-4 text-sm">
-              <a href="/publications/sidewalk-navigation" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">project page</a>
-              <a href="https://www.youtube.com/watch?v=JsAZy3YETwQ" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">video</a>
-              <a href="https://arxiv.org/pdf/2109.05603.pdf" class="text-gray-900 hover:text-gray-600 transition-colors underline decoration-1 underline-offset-2">pdf</a>
-            </div>
+
           </div>
         </div>
       </div>
 
-      <div class="text-center mt-16">
-        <a href="/publications" class="inline-flex items-center px-6 py-3 text-lg font-medium text-gray-900 bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors">
-          View all publications →
-        </a>
-      </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="py-20 bg-gray-50">
+  <section id="contact" class="pt-24 pb-16 border-t border-gray-200">
     <div class="max-w-4xl mx-auto px-8 text-center">
-      <h2 class="text-3xl font-light text-gray-900 mb-8">Contact</h2>
-      
-      <div class="flex justify-center space-x-6 mb-4">
+      <h2 class="text-2xl font-light text-gray-900 mb-8 tracking-wide">Get in touch</h2>
+
+      <div class="flex justify-center flex-wrap gap-x-8 gap-y-2 text-sm mb-12">
         <a href="https://twitter.com/initmaks" class="text-gray-600 hover:text-gray-900 transition-colors">Twitter</a>
         <a href="https://scholar.google.com/citations?user=tFuFXuMAAAAJ" class="text-gray-600 hover:text-gray-900 transition-colors">Scholar</a>
         <a href="https://linkedin.com/in/initmaks" class="text-gray-600 hover:text-gray-900 transition-colors">LinkedIn</a>
-        <button id="email-btn-footer" class="text-gray-600 hover:text-gray-900 transition-colors" title="Email">Email</button>
       </div>
-      
-      <div id="email-display-footer" class="text-sm text-gray-500 font-mono opacity-0 transition-opacity duration-300"></div>
+
+      <p class="max-w-xl mx-auto text-sm text-gray-500 mb-8 leading-relaxed">
+        To get in touch please leave me a note filling this form
+      </p>
+
+      <div class="contact-form-section">
+        <div class="text-center">
+          <button type="button" class="contact-toggle group inline-flex items-center gap-3 px-6 py-3 rounded-full border border-gray-200 hover:border-gray-400 bg-white hover:bg-gray-50 text-gray-600 hover:text-gray-900 transition-all duration-200 shadow-sm hover:shadow">
+            <span class="text-xs font-medium tracking-[0.2em] uppercase">Open form</span>
+            <svg class="contact-arrow w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+        </div>
+
+      <form id="contact-form" action="https://formspree.io/f/xrerdpdq" method="POST" class="contact-form-content hidden max-w-xl mx-auto text-left space-y-4 mt-10">
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true" />
+
+        <div>
+          <label for="contact-name" class="sr-only">Name</label>
+          <input type="text" id="contact-name" name="name" placeholder="Your name" required class="w-full px-4 py-2.5 bg-transparent border border-gray-200 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:border-gray-400 transition-colors" />
+        </div>
+        <div>
+          <label for="contact-email" class="sr-only">Email</label>
+          <input type="email" id="contact-email" name="email" placeholder="Your email" required class="w-full px-4 py-2.5 bg-transparent border border-gray-200 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:border-gray-400 transition-colors" />
+        </div>
+        <div>
+          <label for="contact-message" class="sr-only">Message</label>
+          <textarea id="contact-message" name="message" placeholder="Your message" required rows="5" class="w-full px-4 py-2.5 bg-transparent border border-gray-200 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:border-gray-400 transition-colors resize-y"></textarea>
+        </div>
+        <div class="flex justify-center pt-2">
+          <button type="submit" class="group inline-flex items-center gap-3 px-6 py-3 rounded-full border border-gray-200 hover:border-gray-400 bg-white hover:bg-gray-50 text-gray-600 hover:text-gray-900 transition-all duration-200 shadow-sm hover:shadow disabled:opacity-50 disabled:cursor-not-allowed">
+            <span class="text-xs font-medium tracking-[0.2em] uppercase">Send message</span>
+            <svg class="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+            </svg>
+          </button>
+        </div>
+        <p id="contact-status" class="text-sm text-center min-h-[1.25rem]" role="status" aria-live="polite"></p>
+      </form>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="py-8 border-t border-gray-200">
+  <footer class="pb-10">
     <div class="max-w-4xl mx-auto px-8 text-center">
-      <div class="text-sm text-gray-500 space-y-2">
-        <p>© 2025 Maks Sorokin</p>
-        <p>Built with <a href="https://astro.build" class="hover:text-gray-700 transition-colors">Astro</a> and <a href="https://tailwindcss.com" class="hover:text-gray-700 transition-colors">Tailwind CSS</a></p>
-      </div>
+      <p class="text-xs text-gray-400 tracking-wide">
+        © 2026 Maks Sorokin · Built with <a href="https://astro.build" class="hover:text-gray-600 transition-colors">Astro</a> &amp; <a href="https://tailwindcss.com" class="hover:text-gray-600 transition-colors">Tailwind</a>
+      </p>
     </div>
   </footer>
 
   <!-- Fixed Scroll Indicator -->
   <div id="scroll-indicator" class="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-40 opacity-0 transition-opacity duration-500">
-    <div class="inline-flex items-center space-x-2 text-sm text-gray-600 hover:text-gray-900 transition-colors cursor-pointer bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg border border-gray-200" onclick="document.getElementById('publications').scrollIntoView({behavior: 'smooth'})">
+    <div class="inline-flex items-center space-x-2 text-sm text-gray-600 hover:text-gray-900 transition-colors cursor-pointer bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg border border-gray-200" onclick="document.getElementById('highlight').scrollIntoView({behavior: 'smooth'})">
       <svg class="w-4 h-4 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
       </svg>
@@ -322,32 +708,6 @@ import Layout from '../layouts/Layout.astro';
               behavior: 'smooth',
               block: 'start'
             });
-          }
-        });
-      });
-
-      // Email functionality
-      const emailBtns = [document.getElementById('email-btn'), document.getElementById('email-btn-footer')];
-      const emailDisplays = [document.getElementById('email-display'), document.getElementById('email-display-footer')];
-      let isShown = false;
-      
-      // Base64 encoded email for better obfuscation
-      const encodedEmail = 'bWtzbXNya25AZ21haWwuY29t';
-      
-      emailBtns.forEach((btn, index) => {
-        btn?.addEventListener('click', function() {
-          if (!isShown) {
-            const email = atob(encodedEmail);
-            emailDisplays.forEach(display => {
-              display.textContent = email;
-              display.style.opacity = '1';
-            });
-            isShown = true;
-          } else {
-            emailDisplays.forEach(display => {
-              display.style.opacity = '0';
-            });
-            isShown = false;
           }
         });
       });
@@ -404,6 +764,117 @@ import Layout from '../layouts/Layout.astro';
       
       // Show indicator on initial load if at top of page
       setTimeout(showScrollIndicator, 100);
+
+      // Archive toggle
+      const archiveToggle = document.querySelector('.archive-toggle');
+      const archiveContent = document.querySelector('.archive-content');
+      const archiveArrow = document.querySelector('.archive-arrow');
+      if (archiveToggle && archiveContent && archiveArrow) {
+        archiveToggle.addEventListener('click', function(e) {
+          e.preventDefault();
+          const isHidden = archiveContent.classList.contains('hidden');
+          if (isHidden) {
+            archiveContent.classList.remove('hidden');
+            archiveArrow.style.transform = 'rotate(180deg)';
+          } else {
+            archiveContent.classList.add('hidden');
+            archiveArrow.style.transform = 'rotate(0deg)';
+          }
+          requestAnimationFrame(alignYearColumns);
+        });
+      }
+
+      // Align each year label vertically with the center of its FIRST video,
+      // and constrain the year-column so sticky unsticks at the LAST video's center.
+      function alignYearColumns() {
+        const isLg = window.matchMedia('(min-width: 1024px)').matches;
+        document.querySelectorAll('.year-group').forEach(group => {
+          const yearColumn = group.querySelector('.year-column');
+          const yearSticky = yearColumn?.firstElementChild;
+          if (!yearColumn) return;
+          if (!isLg) {
+            yearColumn.style.height = '';
+            if (yearSticky) yearSticky.style.marginTop = '';
+            return;
+          }
+          const images = group.querySelectorAll('.aspect-video');
+          if (images.length === 0) return;
+          const groupTop = group.getBoundingClientRect().top;
+
+          const firstImage = images[0];
+          const firstRect = firstImage.getBoundingClientRect();
+          const firstCenter = (firstRect.top - groupTop) + firstRect.height / 2;
+          if (yearSticky) {
+            const yearTextHeight = yearSticky.offsetHeight || 30;
+            yearSticky.style.marginTop = Math.max(0, firstCenter - yearTextHeight / 2) + 'px';
+          }
+
+          const lastImage = images[images.length - 1];
+          const lastRect = lastImage.getBoundingClientRect();
+          const stopPoint = (lastRect.top - groupTop) + lastRect.height / 2;
+          yearColumn.style.height = stopPoint + 'px';
+        });
+      }
+      alignYearColumns();
+      window.addEventListener('load', alignYearColumns);
+      let _yearResizeTimer;
+      window.addEventListener('resize', () => {
+        clearTimeout(_yearResizeTimer);
+        _yearResizeTimer = setTimeout(alignYearColumns, 100);
+      });
+
+      // Contact form toggle
+      const contactToggle = document.querySelector('.contact-toggle');
+      const contactFormContent = document.querySelector('.contact-form-content');
+      const contactArrow = document.querySelector('.contact-arrow');
+      const contactToggleLabel = contactToggle?.querySelector('span');
+      if (contactToggle && contactFormContent && contactArrow) {
+        contactToggle.addEventListener('click', () => {
+          const isHidden = contactFormContent.classList.contains('hidden');
+          if (isHidden) {
+            contactFormContent.classList.remove('hidden');
+            contactArrow.style.transform = 'rotate(180deg)';
+            if (contactToggleLabel) contactToggleLabel.textContent = 'Close form';
+          } else {
+            contactFormContent.classList.add('hidden');
+            contactArrow.style.transform = 'rotate(0deg)';
+            if (contactToggleLabel) contactToggleLabel.textContent = 'Open form';
+          }
+        });
+      }
+
+      // Contact form (AJAX submit, no redirect)
+      const contactForm = document.getElementById('contact-form');
+      const contactStatus = document.getElementById('contact-status');
+      if (contactForm && contactStatus) {
+        contactForm.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          const submitBtn = contactForm.querySelector('button[type="submit"]');
+          submitBtn.disabled = true;
+          contactStatus.textContent = 'Sending…';
+          contactStatus.className = 'text-sm text-center min-h-[1.25rem] text-gray-500';
+          try {
+            const response = await fetch(contactForm.action, {
+              method: 'POST',
+              body: new FormData(contactForm),
+              headers: { Accept: 'application/json' }
+            });
+            if (response.ok) {
+              contactStatus.textContent = 'Thanks — your message is on its way.';
+              contactStatus.className = 'text-sm text-center min-h-[1.25rem] text-gray-700';
+              contactForm.reset();
+            } else {
+              const data = await response.json().catch(() => ({}));
+              throw new Error(data?.errors?.[0]?.message || 'Submission failed');
+            }
+          } catch (err) {
+            contactStatus.textContent = 'Something went wrong. Please try again later.';
+            contactStatus.className = 'text-sm text-center min-h-[1.25rem] text-red-500';
+          } finally {
+            submitBtn.disabled = false;
+          }
+        });
+      }
     });
   </script>
 
