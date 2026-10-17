@@ -1,0 +1,20 @@
+---
+// Compact card for early projects: small media, title, year, one-paragraph summary.
+import type { Publication } from '../data/publications';
+
+const { p } = Astro.props as { p: Publication };
+---
+
+<article>
+  <a href={p.href} class="block aspect-video bg-gray-100 rounded-md overflow-hidden">
+    {p.media.video ? (
+      <video class="w-full h-full object-cover" muted loop playsinline preload="none" poster={p.media.poster} data-src={p.media.video} aria-hidden="true"></video>
+    ) : (
+      <img src={p.media.image} alt="" loading="lazy" class:list={['w-full h-full', p.media.fit === 'contain' ? 'object-contain' : 'object-cover']} />
+    )}
+  </a>
+  <p class="meta mt-4 mb-1">{p.year}</p>
+  <h3 class="text-[15px] font-medium text-gray-900 leading-snug mb-2"><a href={p.href} class="hover:text-gray-600">{p.title}</a></h3>
+  <p class="text-[14px] text-gray-600 leading-relaxed mb-2" set:html={p.summary} />
+  {p.links.length > 0 && <div class="pub-links">{p.links.map((l) => <a href={l.href}>{l.label}</a>)}</div>}
+</article>

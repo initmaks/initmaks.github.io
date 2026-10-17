@@ -1,0 +1,28 @@
+---
+import Authors from './Authors.astro';
+import type { Publication } from '../data/publications';
+
+const { p } = Astro.props as { p: Publication };
+---
+
+<div class="flex flex-col lg:flex-row gap-8 items-center">
+  <div class="w-full lg:w-1/3">
+    <div class="aspect-video bg-gray-100 rounded-md overflow-hidden">
+      {p.media.video ? (
+        <video class="w-full h-full object-cover" muted loop playsinline preload="none" poster={p.media.poster} data-src={p.media.video} aria-hidden="true"></video>
+      ) : (
+        <img src={p.media.image} alt="" loading="lazy" class:list={['w-full h-full', p.media.fit === 'contain' ? 'object-contain' : 'object-cover']} />
+      )}
+    </div>
+  </div>
+  <div class="w-full lg:w-2/3">
+    <h3 class="text-[17.5px] font-medium leading-snug text-gray-900 mb-2">
+      <a href={p.href} class="hover:text-gray-600">{p.title}</a>
+    </h3>
+    {p.authors && <p class="text-sm text-gray-500 mb-1.5"><Authors authors={p.authors} /></p>}
+    {p.venue && <p class:list={['meta', p.honor ? 'mb-1' : 'mb-3']}>{p.venue}</p>}
+    {p.honor && <p class="font-mono text-[12px] tracking-[0.03em] text-gray-700 mb-3">{p.honor}</p>}
+    <p class="text-[15px] text-gray-700 leading-relaxed mb-3" set:html={p.summary} />
+    {p.links.length > 0 && <div class="pub-links">{p.links.map((l) => <a href={l.href}>{l.label}</a>)}</div>}
+  </div>
+</div>

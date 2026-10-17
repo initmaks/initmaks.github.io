@@ -1,0 +1,8 @@
+---
+// Section opener: a mono label followed by a hairline rule.
+const { label } = Astro.props as { label: string | number };
+---
+<div class="flex items-center gap-4">
+  <span class="font-mono text-[12px] tracking-[0.04em] text-gray-400 whitespace-nowrap">{label}</span>
+  <span class="h-px flex-1 bg-gray-200"></span>
+</div>

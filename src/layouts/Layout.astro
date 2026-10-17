@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css';
+
 export interface Props {
   title: string;
   description?: string;
@@ -26,10 +28,6 @@ const { title, description } = Astro.props;
       gtag('config', 'G-1J19VDQYCK');
     </script>
     
-    <!-- Import Tailwind CSS -->
-    <style>
-      @import '../styles/global.css';
-    </style>
   </head>
   <body class="bg-white text-gray-900 font-sans leading-relaxed">
     <main class="min-h-screen">

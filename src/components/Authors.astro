@@ -1,0 +1,6 @@
+---
+// Author list with "Maks Sorokin" in bold.
+const { authors } = Astro.props as { authors: string };
+const parts = authors.split('Maks Sorokin');
+---
+{parts.map((part, i) => <>{i > 0 && <b class="font-medium text-gray-900">Maks Sorokin</b>}{part}</>)}

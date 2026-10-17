@@ -1,0 +1,59 @@
+---
+// Shared layout for /publications/* pages: header block (title, authors, venue, links, media), then the page's own sections.
+import Layout from './Layout.astro';
+import Header from '../components/Header.astro';
+import Authors from '../components/Authors.astro';
+
+export interface Props {
+  title: string;
+  description?: string;
+  heading: string;
+  authors?: string;
+  affiliations?: string;
+  venue: string;
+  links: { label: string; href: string }[];
+  video?: string; // local clip, shown with controls
+  poster?: string;
+  image?: string;
+}
+
+const { title, description, heading, authors, affiliations, venue, links, video, poster, image } = Astro.props;
+---
+
+<Layout title={title} description={description ?? heading}>
+  <Header />
+  <main class="max-w-3xl mx-auto px-8 pt-32 pb-24">
+    <a href="/#publications" class="text-btn">← publications</a>
+
+    <p class="meta mt-10 mb-3">{venue}</p>
+    <h1 class="text-3xl font-light text-gray-900 leading-tight mb-5">{heading}</h1>
+    {authors && <p class="text-gray-600 mb-2"><Authors authors={authors} /></p>}
+    {affiliations && <p class="meta mb-2">{affiliations}</p>}
+    {links.length > 0 && <div class="pub-links mt-5">{links.map((l) => <a href={l.href}>{l.label}</a>)}</div>}
+
+    {video && (
+      <div class="aspect-video bg-gray-100 rounded-md overflow-hidden mt-10">
+        <video class="w-full h-full object-cover" controls muted playsinline preload="metadata" poster={poster} src={video}></video>
+      </div>
+    )}
+    {image && <img src={image} alt="" class="w-full rounded-md mt-10" />}
+
+    <div class="paper-body text-[15.5px] text-gray-700 leading-relaxed">
+      <slot />
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .paper-body :global(h2) {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--color-gray-400);
+    margin: 3rem 0 0.75rem;
+  }
+  .paper-body :global(p + p) { margin-top: 1rem; }
+  .paper-body :global(ul) { list-style: disc; padding-left: 1.25rem; }
+  .paper-body :global(li + li) { margin-top: 0.25rem; }
+</style>

@@ -1,59 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 
-/* Custom styles for minimal academic portfolio */
-html {
-  font-family: 'Inter', system-ui, sans-serif;
-  font-feature-settings: 'cv04', 'cv03', 'cv02', 'cv01';
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+  --color-accent: #e0461a;
 }
 
-/* Smooth scrolling */
 html {
+  font-feature-settings: 'cv04', 'cv03', 'cv02', 'cv01';
   scroll-behavior: smooth;
 }
 
-/* Better text rendering */
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Link transitions */
 a {
-  transition: color 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, text-decoration-color 0.15s ease-in-out;
 }
 
-/* Video styling */
-video {
-  border-radius: 0.5rem;
-}
+/* Reading text for the site: Inter for prose, IBM Plex Mono for anything that is metadata. */
+@layer components {
+  /* years, venues, dates, small labels */
+  .meta {
+    @apply font-mono text-[12px] tracking-[0.03em] text-gray-400;
+  }
 
-/* Custom video controls styling */
-video {
-  border-radius: 0.5rem;
-}
+  /* small uppercase heading: "Abstract", "Recent highlight" */
+  .section-label {
+    @apply font-mono text-[12px] uppercase tracking-[0.12em] text-gray-400;
+  }
 
-/* Link hover effects */
-a {
-  transition: all 0.2s ease-in-out;
-}
+  /* inline link inside prose */
+  .link {
+    @apply text-gray-900 underline decoration-gray-300 decoration-1 underline-offset-[3px] hover:decoration-gray-900;
+  }
 
-/* Social icons hover effects */
-.social-icon {
-  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
-}
+  /* nav: small uppercase mono */
+  .nav-link {
+    @apply font-mono text-[12px] uppercase tracking-[0.06em] text-gray-500 hover:text-gray-900;
+  }
 
-.social-icon:hover {
-  transform: translateY(-2px);
-  opacity: 0.8;
-}
+  /* project page · arXiv · code: mono with a faint underline that darkens on hover */
+  .pub-links {
+    @apply flex flex-wrap gap-x-5 gap-y-1;
+  }
+  .pub-links a {
+    @apply font-mono text-[12.5px] text-gray-900 underline decoration-gray-300 decoration-1 underline-offset-4 hover:decoration-gray-900;
+  }
 
-/* Publication card hover effects */
-.publication-card {
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-}
+  /* plain mono links: Twitter  Google Scholar  LinkedIn */
+  .plain-links {
+    @apply flex flex-wrap gap-x-6 gap-y-1;
+  }
+  .plain-links a {
+    @apply font-mono text-[12.5px] text-gray-600 underline decoration-gray-300 decoration-1 underline-offset-4 hover:text-gray-900 hover:decoration-gray-900;
+  }
 
-.publication-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  /* form input: a single underline that darkens on focus */
+  .field {
+    @apply mt-2 block w-full bg-transparent border-0 border-b border-gray-300 px-0 py-2 text-gray-900 rounded-none focus:outline-none focus:border-gray-900 transition-colors;
+  }
+
+  /* borderless mono button, e.g. "scroll" hint */
+  .text-btn {
+    @apply font-mono text-[12.5px] tracking-[0.04em] text-gray-500 hover:text-gray-900 cursor-pointer bg-transparent border-0 p-0 transition-colors;
+  }
 }

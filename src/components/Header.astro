@@ -1,0 +1,24 @@
+---
+// Site header. On the homepage the section links scroll in place; elsewhere they lead back to it.
+const { current } = Astro.props as { current?: 'home' };
+const home = current === 'home';
+const section = (id: string) => (home ? `#${id}` : `/#${id}`);
+const cls = () => ['nav-link', { 'scroll-link': home }];
+---
+
+<header class="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md">
+  <div class="max-w-6xl mx-auto px-8 py-4">
+    <div class="flex justify-between items-center">
+      <a href={home ? '#' : '/'} class="text-xl font-light text-gray-900">Maks Sorokin</a>
+      <nav class="hidden md:flex space-x-7">
+        <a href={section('about')} class:list={cls()}>About</a>
+        <a href={section('publications')} class:list={cls()}>Publications</a>
+        <a href={section('contact')} class:list={cls()}>Contact</a>
+      </nav>
+      <nav class="flex md:hidden space-x-5">
+        <a href={section('publications')} class:list={cls()}>Publications</a>
+        <a href={section('contact')} class:list={cls()}>Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
